@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About
+title: ABOUT
+sub-title: I'm a legend but not a secret.
 permalink: /about/
 ---
 这个博客是借助Jekyll和Github Pages搭建的。现在用的是Jekyll的默认主题[minima](https://github.com/jekyll/minima)，初步做了一些定制，参考了[Andy Shora](http://andyshora.com/)的设计风格（不过他用的是Roots）。

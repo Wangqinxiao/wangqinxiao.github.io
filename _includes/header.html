@@ -2,7 +2,11 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+    <!--<a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>-->
+    <p style="font-size: 60px; color: #fff;text-align:center">Hi, <span style="color: #000">I'm </span>Wang Qinxiao</p>
+    <p style="text-align:center">I'M A DEVELOPER AND POET BASED IN BEIJING.</p>
+    <a href="https://github.com/wangqinxiao/wangqinxiao.github.io"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+
 
     <nav class="site-nav">
       <span class="menu-icon">
@@ -13,7 +17,9 @@
         </svg>
       </span>
 
-      <div class="trigger">
+      <div class="trigger" style="position: absolute;
+    right: 30px;
+    bottom: 0;">
         {% for my_page in site.pages %}
           {% if my_page.title %}
           <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
