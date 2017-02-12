@@ -127,6 +127,8 @@ pre {
 
 .site-header .wrapper {
   padding: 120px 30px 150px; }
+.site-header a {
+  color: #000 !important; }
 
 /**
  * Clearfix
