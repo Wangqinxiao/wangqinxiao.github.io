@@ -14,6 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 author: by 王勤晓
+disqus:
+    shortname: blog-wangqinxiao-com
 title: Hi, I'm Wang qinxiao
 email: wangqinxiao@pku.edu.cn
 description: > # this means to ignore newlines until "baseurl:"
