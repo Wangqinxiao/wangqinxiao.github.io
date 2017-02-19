@@ -1,7 +1,7 @@
 ---
 layout: page
 title: UPDATE LOG
-sub-title: 每天一点小进步
+sub-title: That's one small step for a blog, one giant leap for mankind。
 permalink: /update-log/
 ---
 
