@@ -12,3 +12,10 @@ permalink: /update-log/
 增加了本更新日志。
 
 [Disqus-url]: https://disqus.com/
+
+
+2017年3月4日
+
+修复了Mobile菜单样式bug。
+
+修改了README内容。
