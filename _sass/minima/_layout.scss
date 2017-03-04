@@ -74,6 +74,7 @@
     }
   }
 
+
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
@@ -117,6 +118,13 @@
       margin-left: 20px;
     }
   }
+   @media screen and (min-width: 600px){
+      .trigger {
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+        }
+    }
 }
 
 

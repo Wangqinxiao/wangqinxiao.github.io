@@ -223,6 +223,11 @@ pre {
         margin-left: 20px; }
         .site-nav .page-link:not(:last-child) {
           margin-right: 0; } }
+  @media screen and (min-width: 600px) {
+    .site-nav .trigger {
+      position: absolute;
+      right: 30px;
+      bottom: 0; } }
 
 /**
  * Site footer
