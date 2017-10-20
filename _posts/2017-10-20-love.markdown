@@ -1,0 +1,15 @@
+---
+layout: post
+title:爱
+sub-title: 爱是什么
+date:   2017-10-20 14:42:00 +0800
+categories: jekyll update
+---
+
+爱是尊重和信任。
+
+这是我现在所理解的。
+
+
+
+
