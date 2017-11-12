@@ -20,3 +20,9 @@ permalink: /update-log/
 修复了Mobile菜单样式bug。
 
 修改了README内容。
+
+—————————————
+
+2017年11月12日
+
+新增网易云音乐
