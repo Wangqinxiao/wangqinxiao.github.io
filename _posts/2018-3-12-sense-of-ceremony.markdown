@@ -2,7 +2,7 @@
 layout: post
 title: 生活要有仪式感
 sub-title: 有仪式感的生活应该很有意思吧
-date:   2018-3-11 23:55 +0800
+date:   2018-3-12 20:02 +0800
 categories: jekyll update
 ---
 
