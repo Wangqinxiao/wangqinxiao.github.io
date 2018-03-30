@@ -5,13 +5,17 @@ sub-title: That's one small step for a blog, one giant leap for mankind。
 permalink: /update-log/
 ---
 
-2017年2月19日
+2018年3月30日
 
-增加了评论功能。Powered by [Disqus][Disqus-url].
+remove noisy 163 music
 
-增加了本更新日志。
+修改页脚错别字
 
-[Disqus-url]: https://disqus.com/
+—————————————
+
+2017年11月12日
+
+新增网易云音乐
 
 —————————————
 
@@ -23,6 +27,13 @@ permalink: /update-log/
 
 —————————————
 
-2017年11月12日
+2017年2月19日
 
-新增网易云音乐
+增加了评论功能。Powered by [Disqus][Disqus-url].
+
+增加了本更新日志。
+
+[Disqus-url]: https://disqus.com/
+
+
+

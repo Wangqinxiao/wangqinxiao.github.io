@@ -19,7 +19,7 @@ disqus:
 title: Hi, I'm Wang qinxiao
 email: wangqinxiao@pku.edu.cn
 description: > # this means to ignore newlines until "baseurl:"
-  读有趣的书，做有趣的事，结实有趣的人。
+  读有趣的书，做有趣的事。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: IamCATom
