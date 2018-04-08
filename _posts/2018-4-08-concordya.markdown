@@ -12,10 +12,10 @@ categories: jekyll update
 
 对于有序我有一种很特别的情感，我很思念它。
 
-![concordya]({{ site.url }}/assets/images/concordya.jpeg)
-![concordya1]({{ site.url }}/assets/images/concordya1.jpeg)
-![concordya2]({{ site.url }}/assets/images/concordya2.jpeg)
-![concordya3]({{ site.url }}/assets/images/concordya3.jpeg)
+![concordya]({{ site.url }}/assets/images/concordya.jpg)
+![concordya1]({{ site.url }}/assets/images/concordya1.jpg)
+![concordya2]({{ site.url }}/assets/images/concordya2.jpg)
+![concordya3]({{ site.url }}/assets/images/concordya3.jpg)
 
 
 
