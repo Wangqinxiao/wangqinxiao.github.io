@@ -5,6 +5,12 @@ sub-title: That's one small step for a blog, one giant leap for mankind。
 permalink: /update-log/
 ---
 
+2019年7月21日
+
+新增访问统计
+
+—————————————
+
 2018年3月30日
 
 remove noisy 163 music

@@ -8,15 +8,13 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
+            {% if site.author %} {{ site.author | escape }} {% else %} {{ site.title | escape }} {% endif %}
+          </li>
+          {% if site.email %}
+          <li>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
 
@@ -26,9 +24,7 @@
           <li>
             {% include icon-github.html username=site.github_username %}
           </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
+          {% endif %} {% if site.twitter_username %}
           <li>
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
@@ -38,7 +34,11 @@
 
       <div class="footer-col footer-col-3">
         <p>{{ site.description | escape }}</p>
+        <p><span id="busuanzi_container_site_pv">本站总访问量：
+          <span id="busuanzi_value_site_pv"></span>次</span></p>
+        
       </div>
+
     </div>
 
   </div>
