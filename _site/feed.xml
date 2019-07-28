@@ -1,5 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-28T18:22:57+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">大数据处理二剑客之Hadoop</title><link href="http://localhost:4000/jekyll/update/2019/07/28/Hadoop&Spark.html" rel="alternate" type="text/html" title="大数据处理二剑客之Hadoop" /><published>2019-07-28T15:44:00+08:00</published><updated>2019-07-28T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/Hadoop&amp;Spark</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/Hadoop&amp;Spark.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-28T20:52:56+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">《为什么书呆子不受欢迎》句抄</title><link href="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html" rel="alternate" type="text/html" title="《为什么书呆子不受欢迎》句抄" /><published>2019-07-28T19:54:00+08:00</published><updated>2019-07-28T19:54:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html">&lt;p&gt;最近再看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。&lt;/p&gt;
+
+&lt;p&gt;断断续续，每周末抽出时间来读，只读了三分之一，没有记笔记，也不求甚解。回想这种读书方法是不正确的，这本书虽不是传世经典，需熟读百遍才能其义自见，但只囫囵吞枣的读一遍还是不够的。起码有个读书笔记，加上自己的思考，想想如何学以致用，再不济也要抄几个会心的句子。&lt;/p&gt;
+
+&lt;p&gt;此前读的几篇，自然是没有笔记，但遇到不错的句子还是随手划了记号。今日先总结一篇，权当好好读书的开始。&lt;/p&gt;
+
+&lt;h3 id=&quot;why-nerds-are-unpopuler-为什么书呆子不受欢迎&quot;&gt;Why Nerds Are Unpopuler 为什么书呆子不受欢迎&lt;/h3&gt;
+
+&lt;p&gt;本文讲述为什么Nerds（搞技术的书呆子）不受欢迎？从Nerds本身、人类社会学、家长、学校等方面都做了分析，最后把教育制度狠狠的批判了一番。&lt;/p&gt;
+
+&lt;p&gt;1.&lt;code class=&quot;highlighter-rouge&quot;&gt;Another reason kids persecute nerds is to make themselves feel better. When you tread water, you lift yourself up by pushing water down. Likewise, in any social hierarchy, people unsure of their own position will try to emphasize it by maltreating those they think rank below. I've read that this is why poor whites in the United States are the group most hostile to blacks.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;其他孩子欺负Nerds的一个原因是通过打压别人，抬高自己，从而从心理上获得平衡。在人类社会中，往往对自己的地位不够自信的人才会欺凌比自己阶层低的人，底层人民狗咬狗，大狗咬小狗。比如，在美国最敌视黑人的是穷的白人。对于个人而言，避免自己称为被欺凌的对象，或者靠欺凌获得心理安慰的“穷白人”，只能是往更高的阶层爬升。&lt;/p&gt;
+
+&lt;p&gt;2.&lt;code class=&quot;highlighter-rouge&quot;&gt;Like a politician who wants to distract voters from bad times at home, you can create an enemy if there isn't a real one. By singling out and persecuting a nerd, a group of kids from higher in the hierarchy create bonds between themselves. Attacking an outsider makes them all insiders. This is why the worst cases of bullying happen with groups.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;小孩子们欺负Nerds的另一个原因是为了合群。形成一个团体最有效的办法是找到一个共同的敌人，对外同仇敌忾，内部才显得团结。政客往往会用这一招来获得国内民众的支持，最近的特朗普在2020大选之前打压华为，少不了这方面的考虑。这招够损，但实用。&lt;/p&gt;
+
+&lt;p&gt;3.&lt;code class=&quot;highlighter-rouge&quot;&gt;Bullying was only part of the problem. Another problem, and possibly an even worse one, was that we never had anything real to work on. Humans like to work; in most of the world, your work is your identity. And all the work we did was pointless, or seemed so at the time.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;校园霸凌还有一个原因，就是闲的没事干，吃饱了撑着找找茬。作者对现在教育制度大家批判，认为都是家长和学校太懒，学生在学校做的事情没有意义。作者观点似乎太偏激，只提出了问题，没给出有效的解决方案，这里不多加讨论。我记下这句话的原因是因为他提到：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;人其实都是喜欢工作的，在大多数情况下，工作就是个人的身份。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如果我们讨厌工作，觉得工作很苦很累，往往不是因为工作强度大、时间长，而是因为觉得工作没有意义，没有收获感。对于成年人来说，工作是生活的主题，并影响甚至决定家庭、感情等其他各个方面。因此，对的职业规划显得更加重要。&lt;/p&gt;
+
+&lt;p&gt;本文完。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/nerds.html&quot;&gt;hy Nerds Are Unpopuler 原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近再看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。</summary></entry><entry><title type="html">大数据处理二剑客之Hadoop</title><link href="http://localhost:4000/jekyll/update/2019/07/28/Hadoop&Spark.html" rel="alternate" type="text/html" title="大数据处理二剑客之Hadoop" /><published>2019-07-28T15:44:00+08:00</published><updated>2019-07-28T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/Hadoop&amp;Spark</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/Hadoop&amp;Spark.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
 
 &lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
 
@@ -133,12 +163,4 @@ https://baike.baidu.com/item/Hadoop/3526507&lt;/p&gt;</content><author><name>by 
 
 &lt;p&gt;以前上高中的时候，觉得自己随便上一个大学都可以，是金子到哪里都能发光！这种想法很幼稚。教育是影响一生的事情，虽然西外也不错，但如果本科就能来北大，将会是另一片天地。现在即将毕业，工作如果最终还是去了华为，也要争取去最好的部门，外派去不同的国家，闯荡这精彩的世界。生活上，交友更需谨慎，与优秀和正能量的人在一起，相信自己也会越来越优秀，身心健康、天天向上，这样的自己没人会不喜欢。&lt;/p&gt;
 
-&lt;p&gt;这一辈子太短，也不能重来，所以要小心珍惜，不可乱来而挥霍了这唯一当人的机会！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">环境对人的影响有多大？很大。</summary></entry><entry><title type="html">崇拜</title><link href="http://localhost:4000/jekyll/update/2017/11/07/worship.html" rel="alternate" type="text/html" title="崇拜" /><published>2017-11-07T11:14:00+08:00</published><updated>2017-11-07T11:14:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/11/07/worship</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/11/07/worship.html">&lt;p&gt;我一直觉得自己是缺爱，最近突然恍悟自己是渴望被崇拜的感觉。&lt;/p&gt;
-
-&lt;p&gt;表面一副低调的样子，其实内心很渴望做出成绩的那一刻，被众人崇拜，淡定装逼的感觉。但随着时间的流逝，遇到越来越多优秀的人，愈来愈发现自己其实并没有才，这是一件很残忍的事。&lt;/p&gt;
-
-&lt;p&gt;由于一直没有做出什么有成绩的事情，被崇拜的渴望无法得到满足，于是这种渴望便转移到感情上了，女生表达出对我的崇拜，我便丝毫没有抵抗力，在一起时间长了没有表现出对我的崇拜，我便又开始折腾，这也是我感情之路坎坷的原因。&lt;/p&gt;
-
-&lt;p&gt;现在马上要往奔三的方向发展了。三十而立，我也自当认清自己，不可无才还傲物，但另一方面，也无需妄自菲薄，在自己的能力范围内做出最大的努力，不断提升自己。多大能力办多大事，起码不要让自己对自己失望。&lt;/p&gt;
-
-&lt;p&gt;至于感情方面，一旦在一起，责任和担当才是最重要的。能做到从一而终，一直走下去，在这个节奏越来越快的时代，也是一件很了不起的事情！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">我一直觉得自己是缺爱，最近突然恍悟自己是渴望被崇拜的感觉。</summary></entry></feed>
+&lt;p&gt;这一辈子太短，也不能重来，所以要小心珍惜，不可乱来而挥霍了这唯一当人的机会！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">环境对人的影响有多大？很大。</summary></entry></feed>
