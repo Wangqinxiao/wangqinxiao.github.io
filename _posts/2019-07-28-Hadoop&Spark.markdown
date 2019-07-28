@@ -55,7 +55,9 @@ Apache中其他Hadoop相关的项目包括：
 
 那么问题，既然Hadoop生态家族这么庞大，我们为什么要选择Spark作为对于大数据进行数据分析和数据挖掘的基本计算框架？欲知后事如何，请听下回分解。
 
+参考资料；
 https://blog.51cto.com/xpleaf/2080181
+https://baike.baidu.com/item/Hadoop/3526507
 
 
 
