@@ -1,5 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-21T21:29:26+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">2019 FLAG</title><link href="http://localhost:4000/jekyll/update/2019/07/21/myflag.html" rel="alternate" type="text/html" title="2019 FLAG" /><published>2019-07-21T15:44:00+08:00</published><updated>2019-07-21T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/21/myflag</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/21/myflag.html">&lt;p&gt;2019已过半，依然在华为。泰国回国后，CEA解散，换了小组，近期即将又要被调到新部门。被动的状态很危险，不做出改变，温水煮亲蛙，只会越来越被动。最近有朋友在头条让我去，虽托辞暂时没有跳槽意愿，但其实更多是因为没有积累，信心不足。常怀忧患意识，多为自己计量，才能在工作中掌握主动权，做到游刃有余，不至于狼狈不堪。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-28T18:02:14+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">大数据处理二剑客之Hadoop</title><link href="http://localhost:4000/jekyll/update/2019/07/28/Hadoop&Spark.html" rel="alternate" type="text/html" title="大数据处理二剑客之Hadoop" /><published>2019-07-28T15:44:00+08:00</published><updated>2019-07-28T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/Hadoop&amp;Spark</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/Hadoop&amp;Spark.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
+
+&lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
+
+&lt;p&gt;要了解一项技术，首先思考它是干什么用的？&lt;code class=&quot;highlighter-rouge&quot;&gt;大数据领域的工作包括&quot;数据处理&quot;和&quot;数据分析&quot;&lt;/code&gt;。数据处理似食材准备，数据分析似烹饪过程。准备食材包括买菜、洗菜、切菜、腌制等过程，为下一步烹饪做准备；数据处理包括数据收集、存储、清洗、转换、组合等动作，方便我们进行下一步数据分析。&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop和Spark就是数据处理这一阶段的关键两项技术，二者有重合，但各司其职.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这篇文章先梳理Hadoop。首先，&lt;code class=&quot;highlighter-rouge&quot;&gt;一句话描述Hadoop：大数据分析处理领域的分布式系统基础架构&lt;/code&gt;。Hadoop核心思想是分布式，即将任务分到多台计算机上进行处理。&lt;/p&gt;
+
+&lt;h1 id=&quot;起源受启发于google&quot;&gt;起源：受启发于Google&lt;/h1&gt;
+
+&lt;p&gt;Hadoop的诞生比Spark要早。可追溯到2004年，两个程序员Doug Cutting和Mike Cafarella受Google Lab 开发的Map/Reduce和Google File System(GFS)的启发，开始实施最初的版本（称为HDFS和MapReduce），最初Hadoop只与网页索引有关，用于处理海量网页数据进行搜索。随后由Apache基金会支持开发，逐渐发展为一个大数据分析处理领域的分布式系统基础架构。&lt;/p&gt;
+
+&lt;p&gt;该项目的创建者，Doug Cutting解释Hadoop的得名 ：“这个名字是我孩子给一个棕黄色的大象玩具命名的“.&lt;/p&gt;
+
+&lt;p&gt;Hadoop的主要组成部分是HDFS和MamReduce。&lt;/p&gt;
+
+&lt;h1 id=&quot;hdfs分布式文件系统&quot;&gt;HDFS：分布式文件系统&lt;/h1&gt;
+&lt;p&gt;HDFS（Hadoop Distributed File System，Hadoop分布式文件系统，顾名思义是用于存储数据的系统，与传统的分级文件系统（使用目录组织文件）相比，其一样可以增、删、改、查，HDFS的不同之处是分布式存储。&lt;/p&gt;
+
+&lt;p&gt;分布式存储指的是存储在HDFS中的文件被分成块。HDFS有两个关键概念：NameNode和DataNode，NameNode可以控制所有文件的操作，DataNode用于存储文件。分布式文件系统设计的优势在于可支持海量数据de的快速存储和查询等操作。&lt;/p&gt;
+
+&lt;h1 id=&quot;mapreduce分布式计算框架&quot;&gt;MapReduce：分布式计算框架&lt;/h1&gt;
+&lt;p&gt;MapReduce，顾名思义其核心是Map（影射）函数和Reduce（化简、规约）函数。&lt;/p&gt;
+
+&lt;p&gt;Map函数遍历集合里的每个目标对其应用同一个操作。再用烹饪的例子，在准备食材时需要洗菜，把茄子、辣椒、黄瓜……都洗一遍，逐个清洗这一过程就是Map，集合对象是各种食材，同一操作就是清洗。&lt;/p&gt;
+
+&lt;p&gt;Reduce函数遍历集合里的每个目标将其综合称为一个结果。还是烹饪的例子，菜洗好后，开始做大杂烩，锅里加入茄子、加入辣椒、加入黄瓜……最终得到一盆大杂烩。加入各种食材这一过程就是Reduce，将多种食材归约为最重的一个结果———大杂烩菜。&lt;/p&gt;
+
+&lt;p&gt;MapReduce这两个核心函数并不新鲜，其内容不仅是这二个函数（其他如Group，Sort等），而是一种编程模型，是一种方法，抽象理论。MapReduce借鉴了语言Lisp的函数式编程设计（什么是函数式编程，新文再议），体现了大数据处理过程中分而治之的思想。分布式是分而治之思想的实践，MapReduce专为分布式计算设计。&lt;/p&gt;
+
+&lt;p&gt;除了HDFS和MapReduce，Hadoop还包括以下模块：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hadoop Common：支持其他Hadoop模块的通用工具。&lt;/li&gt;
+  &lt;li&gt;Hadoop YARN：一种作业调度和集群资源管理的框架。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apache中其他Hadoop相关的项目包括：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ambari：一种用于提供、管理和监督Apache Hadoop集群的基于Web UI的且易于使用的Hadoop管理工具。&lt;/li&gt;
+  &lt;li&gt;Avro：一种数据序列化系统。&lt;/li&gt;
+  &lt;li&gt;Cassandra：一种无单点故障的可扩展的分布式数据库。&lt;/li&gt;
+  &lt;li&gt;Chukwa：一种用于管理大型分布式系统的数据收集系统。&lt;/li&gt;
+  &lt;li&gt;HBase：一种支持存储大型表的结构化存储的可扩展的分布式数据库。&lt;/li&gt;
+  &lt;li&gt;Hive：一种提供数据汇总和特定查询的数据仓库。&lt;/li&gt;
+  &lt;li&gt;Mahout：一种可扩展的机器学习和数据挖掘库（Scala语言实现，可结合Spark后端）。&lt;/li&gt;
+  &lt;li&gt;Pig：一种高级的数据流语言且支持并行计算的执行框架（2017年发布的最新版本0.17.0是添加了Spark上的Pig应* 用）。&lt;/li&gt;
+  &lt;li&gt;Spark：一种用于Hadoop数据的快速通用计算引擎。Spark提供一种支持广泛应用的简单而易懂的编程模型，包括* ETL（ Extract-Transform-Load）、机器学习、流处理以及图计算。&lt;/li&gt;
+  &lt;li&gt;Tez：一种建立在Hadoop YARN上数据流编程框架，它提供了一个强大而灵活的引擎来任意构建DAG* （Directed-acyclic-graph）任务去处理用于批处理和交互用例的数据。&lt;/li&gt;
+  &lt;li&gt;ZooKeeper：一种给分布式应用提供高性能的协同服务系统。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;那么问题，既然Hadoop生态家族这么庞大，我们为什么要选择Spark作为对于大数据进行数据分析和数据挖掘的基本计算框架？欲知后事如何，请听下回分解。&lt;/p&gt;
+
+&lt;p&gt;https://blog.51cto.com/xpleaf/2080181&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">2019 FLAG</title><link href="http://localhost:4000/jekyll/update/2019/07/21/myflag.html" rel="alternate" type="text/html" title="2019 FLAG" /><published>2019-07-21T15:44:00+08:00</published><updated>2019-07-21T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/21/myflag</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/21/myflag.html">&lt;p&gt;2019已过半，依然在华为。泰国回国后，CEA解散，换了小组，近期即将又要被调到新部门。被动的状态很危险，不做出改变，温水煮亲蛙，只会越来越被动。最近有朋友在头条让我去，虽托辞暂时没有跳槽意愿，但其实更多是因为没有积累，信心不足。常怀忧患意识，多为自己计量，才能在工作中掌握主动权，做到游刃有余，不至于狼狈不堪。&lt;/p&gt;
 
 &lt;p&gt;预想如果跳槽，还需做好三方面的准备：&lt;/p&gt;
 
@@ -86,6 +139,4 @@
 
 &lt;p&gt;现在马上要往奔三的方向发展了。三十而立，我也自当认清自己，不可无才还傲物，但另一方面，也无需妄自菲薄，在自己的能力范围内做出最大的努力，不断提升自己。多大能力办多大事，起码不要让自己对自己失望。&lt;/p&gt;
 
-&lt;p&gt;至于感情方面，一旦在一起，责任和担当才是最重要的。能做到从一而终，一直走下去，在这个节奏越来越快的时代，也是一件很了不起的事情！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">我一直觉得自己是缺爱，最近突然恍悟自己是渴望被崇拜的感觉。</summary></entry><entry><title type="html">爱</title><link href="http://localhost:4000/jekyll/update/2017/10/20/love.html" rel="alternate" type="text/html" title="爱" /><published>2017-10-20T14:42:00+08:00</published><updated>2017-10-20T14:42:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/10/20/love</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/10/20/love.html">&lt;p&gt;爱是尊重和信任。&lt;/p&gt;
-
-&lt;p&gt;这是我现在所理解的。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">爱是尊重和信任。</summary></entry></feed>
+&lt;p&gt;至于感情方面，一旦在一起，责任和担当才是最重要的。能做到从一而终，一直走下去，在这个节奏越来越快的时代，也是一件很了不起的事情！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">我一直觉得自己是缺爱，最近突然恍悟自己是渴望被崇拜的感觉。</summary></entry></feed>
