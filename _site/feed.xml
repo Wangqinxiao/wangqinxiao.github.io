@@ -1,5 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-28T21:50:57+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">《为什么书呆子不受欢迎》句抄</title><link href="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html" rel="alternate" type="text/html" title="《为什么书呆子不受欢迎》句抄" /><published>2019-07-28T19:54:00+08:00</published><updated>2019-07-28T19:54:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html">&lt;p&gt;最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-04T22:27:46+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">大数据处理二剑客之Spark</title><link href="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&Spark1.html" rel="alternate" type="text/html" title="大数据处理二剑客之Spark" /><published>2019-08-04T17:25:00+08:00</published><updated>2019-08-04T17:25:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
+
+&lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
+
+&lt;p&gt;要了解一项技术，首先思考它是干什么用的？&lt;code class=&quot;highlighter-rouge&quot;&gt;大数据领域的工作包括&quot;数据处理&quot;和&quot;数据分析&quot;&lt;/code&gt;。数据处理似食材准备，数据分析似烹饪过程。准备食材包括买菜、洗菜、切菜、腌制等过程，为下一步烹饪做准备；数据处理包括数据收集、存储、清洗、转换、组合等动作，方便我们进行下一步数据分析。&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop和Spark就是数据处理这一阶段（大数据分析也有涉及，但以处理为主）的关键两项技术，二者有重合，但各司其职.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这篇文章梳理Spark。首先，&lt;code class=&quot;highlighter-rouge&quot;&gt;一句话描述Spark：最受欢迎的大数据计算框架&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;Spark是加州大学伯克利分校的AMP实验室开发的类似Hadoop MapReduce的通用并行框架，诞生于2009年，2013年成为了Aparch基金项目。Spark是MapReduce的替代方案，而且兼容HDFS、Hive，可融入Hadoop的生态系统，以弥补MapReduce的不足。&lt;/p&gt;
+
+&lt;h1 id=&quot;spark-vs-hadoop&quot;&gt;Spark VS Hadoop&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wangqinxiao.github.io/jekyll/update/2019/07/28/Hadoop&amp;amp;Spark.html&quot;&gt;大数据处理二剑客之Hadoop&lt;/a&gt;一文梳理了Hadoop生态系统，Hadoop已有MapReduce计算框架，为什么又要用Spark作为大数据计算框架呢？&lt;/p&gt;
+
+&lt;p&gt;答案是：因为&lt;code class=&quot;highlighter-rouge&quot;&gt;Spark比Hadoop MapReduce更快&lt;/code&gt;。Spark比MapReduce更快的原因是，Hadoop MapReduce直接读写存储设备硬盘（HDFS），而&lt;code class=&quot;highlighter-rouge&quot;&gt;Spark基于内存进行计算&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;Spark和Hadoop MaoReduce计算框架一样，是分布式架构。其特点是在数据计算的过程中，把中间结果缓存在内存中。在进行大量数据计算时，直接从内存中读取数据，这要比从硬盘中读取快很多，速度优势明显。&lt;/p&gt;
+
+&lt;p&gt;但是，基于内存的计算同样也会带来缺点。&lt;code class=&quot;highlighter-rouge&quot;&gt;与Hadoop MapReduce相比，Spark的缺点是不稳定&lt;/code&gt;。内存毕竟有限，成本也高，如果数据量过大的话，容易造成内存溢出的问题，从而导致计算过程崩溃。Hadoop MapReduce写的程序虽然慢，但是总会算出结果。而Spark写的程序常常由于数据量过大、内存不够或者计算资源配置不合理，导致崩溃（如Lost stages等等）。笔者在一线使用Spark进行数据处理，程序崩溃是最头疼的事情。&lt;/p&gt;
+
+&lt;p&gt;鉴于Spark基于内存计算而导致的速度快的优点和不稳定的缺点。在大数据项目的计算框架技术选型时，需要&lt;code class=&quot;highlighter-rouge&quot;&gt;综合考虑数据量、业务的时间要求、可用计算资源&lt;/code&gt;。一般在&lt;code class=&quot;highlighter-rouge&quot;&gt;数据处理阶段（原始数据量一般较大）的过程中用Hadoop MapReduce&lt;/code&gt;，在&lt;code class=&quot;highlighter-rouge&quot;&gt;数据分析（数据已经过清洗，数据量一般较小）的过程中使用Spark&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;Spark已经融入Hadoop系统，可支持Hadoop Yarn资源管理，HDFS进行数据存储。&lt;/p&gt;
+
+&lt;h1 id=&quot;spark组成部分&quot;&gt;Spark组成部分&lt;/h1&gt;
+
+&lt;p&gt;Spark的主要组件有：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SparkCore：Spark核心计算组件，实现分布式计算。它是我们最常用到的组件。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;＊ SparkSQL：Spark Sql 是Spark来操作结构化数据的程序包，可以让我使用Hive SQL语句的方式来查询和处理数据。&lt;/p&gt;
+
+&lt;p&gt;SparkStreaming： 是Spark提供的对实时数据进行流式计算的组件。&lt;/p&gt;
+
+&lt;p&gt;MLlib：提供常用机器学习算法的实现库。&lt;/p&gt;
+
+&lt;p&gt;GraphX：提供一个分布式图计算框架，能高效进行图计算。&lt;/p&gt;
+
+&lt;h1 id=&quot;spark相关概念&quot;&gt;Spark相关概念&lt;/h1&gt;
+
+&lt;p&gt;这部分梳理我们最常用到的Spark Core的运行原理。Spark程序在运行过程中，涉及到的概念包括Application、Driver、Executer、Job、Stage、RDD等。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Application：编写的Spark应用程序就是一个Application。&lt;/li&gt;
+  &lt;li&gt;Driver：Driver运行Application的Main()函数并创建SparkContext，即应用程序的运行环境。SparkContext负责分布式Cluster间的通信、任务分配管理等。通常SparkContext即代表Driver。当Executor部分运行完毕后，Driver负责将SparkContext关闭&lt;/li&gt;
+  &lt;li&gt;Excuter：执行器。一个Excuter代表一个进程，负责计算任务，并将结果存在内存或者磁盘上。Excuter越多，说明进程越多，执行速度也就更快。&lt;/li&gt;
+  &lt;li&gt;Job：Job是一个计算作业，由一个或着多个任务集组成。一次Spark Action，例如ReduceByKey就会催生一次计算作业，行成一个Job。一个Job包含多个RDD及作用于相应RDD上的各种Operation。&lt;/li&gt;
+  &lt;li&gt;Stage：Stage是一个任务集对应的调度阶段。每个Job会被拆分很多组Task，每组任务被称为Stage（或者TaskSet）。&lt;/li&gt;
+  &lt;li&gt;Task：任务被送到某个Executor上的工作任务;单个分区数据集上的最小处理流程单元.&lt;/li&gt;
+  &lt;li&gt;RDD：弹性分布式数据集（Resilient Distributed Datasets，RDD），Spark的一种数据对象，是Spark的基本计算单元。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;参考资料；
+https://www.cnblogs.com/xia520pi/p/8609938.html
+https://baike.baidu.com/item/SPARK/2229312?fr=aladdin
+https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">《为什么书呆子不受欢迎》句抄</title><link href="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html" rel="alternate" type="text/html" title="《为什么书呆子不受欢迎》句抄" /><published>2019-07-28T19:54:00+08:00</published><updated>2019-07-28T19:54:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html">&lt;p&gt;最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。&lt;/p&gt;
 
 &lt;p&gt;断断续续，每周末抽出时间来读，只读了三分之一，没有记笔记，也不求甚解。回想这种读书方法是不正确的，这本书虽不是传世经典，需熟读百遍才能其义自见，但只囫囵吞枣的读一遍还是不够的。起码有个读书笔记，加上自己的思考，想想如何学以致用，再不济也要抄几个会心的句子。&lt;/p&gt;
 
@@ -33,7 +90,7 @@
 
 &lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
 
-&lt;p&gt;要了解一项技术，首先思考它是干什么用的？&lt;code class=&quot;highlighter-rouge&quot;&gt;大数据领域的工作包括&quot;数据处理&quot;和&quot;数据分析&quot;&lt;/code&gt;。数据处理似食材准备，数据分析似烹饪过程。准备食材包括买菜、洗菜、切菜、腌制等过程，为下一步烹饪做准备；数据处理包括数据收集、存储、清洗、转换、组合等动作，方便我们进行下一步数据分析。&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop和Spark就是数据处理这一阶段的关键两项技术，二者有重合，但各司其职.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;要了解一项技术，首先思考它是干什么用的？&lt;code class=&quot;highlighter-rouge&quot;&gt;大数据领域的工作包括&quot;数据处理&quot;和&quot;数据分析&quot;&lt;/code&gt;。数据处理似食材准备，数据分析似烹饪过程。准备食材包括买菜、洗菜、切菜、腌制等过程，为下一步烹饪做准备；数据处理包括数据收集、存储、清洗、转换、组合等动作，方便我们进行下一步数据分析。&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop和Spark就是数据处理这一阶段（大数据分析也有涉及，但以处理为主）的关键两项技术，二者有重合，但各司其职.&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;这篇文章先梳理Hadoop。首先，&lt;code class=&quot;highlighter-rouge&quot;&gt;一句话描述Hadoop：大数据分析处理领域的分布式系统基础架构&lt;/code&gt;。Hadoop核心思想是分布式，即将任务分到多台计算机上进行处理。&lt;/p&gt;
 
@@ -155,12 +212,4 @@ https://baike.baidu.com/item/Hadoop/3526507&lt;/p&gt;</content><author><name>by 
 
 &lt;p&gt;我还是比较庆幸自己读研选择了CAT，恰逢时运幸我，开始走进了计算机的世界。爱折腾这毛病，在感情上是百害而无一利，但在人生方向的选择了上，有时却颇有裨益。我一直在尝试自己能做什么，适合做什么，翻译、新闻、CAT、老师、程序员等皆有尝试，目前看来程序员对我来说是一个在兴趣、收入、能力匹配上面都合适的选择，但看到满大街的程序员和不断的泡沫破裂传言，也在思考，如果有一天没有这么多需求，我该何去何从。所以工作最终还是选择去华为做网络技术工程师，听说这个岗位外派机会很多，一来收入会多些解我饱腹之忧，二来能闯荡世界安我这颗不安的心。已入职的老段说部门选择很多，做技术、做业务都可以，我听后很是向往，摩拳擦掌跃跃欲试。&lt;/p&gt;
 
-&lt;p&gt;看准时机，跳出舒适圈，尝试多种选择。但折腾固然有利有弊，每次选择都将是一生的改变，且行且谨慎。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近，一位读MTI现于国企工作的同学跟我抱怨其工作前景暗淡，收入微薄，欲回校重造。我听后不胜唏嘘，他是一个挺努力的同学，成绩也不错，现在郁郁寡欢大概是因为选择不合适。</summary></entry><entry><title type="html">环境的影响</title><link href="http://localhost:4000/jekyll/update/2017/11/27/environment.html" rel="alternate" type="text/html" title="环境的影响" /><published>2017-11-27T00:00:00+08:00</published><updated>2017-11-27T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/11/27/environment</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/11/27/environment.html">&lt;p&gt;环境对人的影响有多大？很大。&lt;/p&gt;
-
-&lt;p&gt;以前我一直认为，只要自己保持一个清晰理智的头脑，就可以做到出淤泥而不染，不受周遭的人和事物的影响。现在经过一些经验教训后，我发现自己严重低估了环境的影响。很多时候我觉得环境没有影响我，是因为我被影响反而还不自知，只有在一段时间后进行反思才会看清楚。幸好现在的我已经认识到了环境潜移默化的影响和禁锢，为时尚不晚。&lt;/p&gt;
-
-&lt;p&gt;其实易受环境的影响并不是一件坏事，时刻保持警惕去抵制环境的影响是一件不现实也不必要的事情。认识到自己无法避免环境的影响后，只需要慎重选择自己所处的环境，身处一个优秀的环境，然后就任他潜移默化的影响我吧。&lt;/p&gt;
-
-&lt;p&gt;以前上高中的时候，觉得自己随便上一个大学都可以，是金子到哪里都能发光！这种想法很幼稚。教育是影响一生的事情，虽然西外也不错，但如果本科就能来北大，将会是另一片天地。现在即将毕业，工作如果最终还是去了华为，也要争取去最好的部门，外派去不同的国家，闯荡这精彩的世界。生活上，交友更需谨慎，与优秀和正能量的人在一起，相信自己也会越来越优秀，身心健康、天天向上，这样的自己没人会不喜欢。&lt;/p&gt;
-
-&lt;p&gt;这一辈子太短，也不能重来，所以要小心珍惜，不可乱来而挥霍了这唯一当人的机会！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">环境对人的影响有多大？很大。</summary></entry></feed>
+&lt;p&gt;看准时机，跳出舒适圈，尝试多种选择。但折腾固然有利有弊，每次选择都将是一生的改变，且行且谨慎。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近，一位读MTI现于国企工作的同学跟我抱怨其工作前景暗淡，收入微薄，欲回校重造。我听后不胜唏嘘，他是一个挺努力的同学，成绩也不错，现在郁郁寡欢大概是因为选择不合适。</summary></entry></feed>
