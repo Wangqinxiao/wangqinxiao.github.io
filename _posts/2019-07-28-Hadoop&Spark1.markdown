@@ -59,7 +59,8 @@ GraphX：提供一个分布式图计算框架，能高效进行图计算。
 
 
 
-参考资料；
+参考资料：
+
 https://www.cnblogs.com/xia520pi/p/8609938.html
 https://baike.baidu.com/item/SPARK/2229312?fr=aladdin
 https://blog.csdn.net/liuxiangke0210/article/details/79687240

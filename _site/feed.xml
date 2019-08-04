@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-04T22:27:46+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-04T22:43:01+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
 </subtitle><author><name>by 王勤晓</name></author><entry><title type="html">大数据处理二剑客之Spark</title><link href="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&Spark1.html" rel="alternate" type="text/html" title="大数据处理二剑客之Spark" /><published>2019-08-04T17:25:00+08:00</published><updated>2019-08-04T17:25:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
 
 &lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
@@ -53,8 +53,9 @@
   &lt;li&gt;RDD：弹性分布式数据集（Resilient Distributed Datasets，RDD），Spark的一种数据对象，是Spark的基本计算单元。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;参考资料；
-https://www.cnblogs.com/xia520pi/p/8609938.html
+&lt;p&gt;参考资料：&lt;/p&gt;
+
+&lt;p&gt;https://www.cnblogs.com/xia520pi/p/8609938.html
 https://baike.baidu.com/item/SPARK/2229312?fr=aladdin
 https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">《为什么书呆子不受欢迎》句抄</title><link href="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html" rel="alternate" type="text/html" title="《为什么书呆子不受欢迎》句抄" /><published>2019-07-28T19:54:00+08:00</published><updated>2019-07-28T19:54:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html">&lt;p&gt;最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。&lt;/p&gt;
 
