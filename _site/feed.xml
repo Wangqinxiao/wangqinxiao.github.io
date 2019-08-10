@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-04T22:43:01+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-10T15:32:33+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
 </subtitle><author><name>by 王勤晓</name></author><entry><title type="html">大数据处理二剑客之Spark</title><link href="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&Spark1.html" rel="alternate" type="text/html" title="大数据处理二剑客之Spark" /><published>2019-08-04T17:25:00+08:00</published><updated>2019-08-04T17:25:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
 
 &lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
@@ -53,11 +53,12 @@
   &lt;li&gt;RDD：弹性分布式数据集（Resilient Distributed Datasets，RDD），Spark的一种数据对象，是Spark的基本计算单元。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;参考资料：&lt;/p&gt;
-
-&lt;p&gt;https://www.cnblogs.com/xia520pi/p/8609938.html
-https://baike.baidu.com/item/SPARK/2229312?fr=aladdin
-https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">《为什么书呆子不受欢迎》句抄</title><link href="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html" rel="alternate" type="text/html" title="《为什么书呆子不受欢迎》句抄" /><published>2019-07-28T19:54:00+08:00</published><updated>2019-07-28T19:54:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html">&lt;p&gt;最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。&lt;/p&gt;
+&lt;p&gt;[参考资料]：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/xia520pi/p/8609938.html&quot;&gt;https://www.cnblogs.com/xia520pi/p/8609938.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/SPARK/2229312?fr=aladdin&quot;&gt;https://baike.baidu.com/item/SPARK/2229312?fr=aladdin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/liuxiangke0210/article/details/79687240&quot;&gt;https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">《为什么书呆子不受欢迎》句抄</title><link href="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html" rel="alternate" type="text/html" title="《为什么书呆子不受欢迎》句抄" /><published>2019-07-28T19:54:00+08:00</published><updated>2019-07-28T19:54:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html">&lt;p&gt;最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。&lt;/p&gt;
 
 &lt;p&gt;断断续续，每周末抽出时间来读，只读了三分之一，没有记笔记，也不求甚解。回想这种读书方法是不正确的，这本书虽不是传世经典，需熟读百遍才能其义自见，但只囫囵吞枣的读一遍还是不够的。起码有个读书笔记，加上自己的思考，想想如何学以致用，再不济也要抄几个会心的句子。&lt;/p&gt;
 
@@ -140,9 +141,11 @@ https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/p&gt;</content
 
 &lt;p&gt;那么问题，既然Hadoop生态家族这么庞大，我们为什么要选择Spark作为对于大数据进行数据分析和数据挖掘的基本计算框架？欲知后事如何，请听下回分解。&lt;/p&gt;
 
-&lt;p&gt;参考资料；
-https://blog.51cto.com/xpleaf/2080181
-https://baike.baidu.com/item/Hadoop/3526507&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">2019 FLAG</title><link href="http://localhost:4000/jekyll/update/2019/07/21/myflag.html" rel="alternate" type="text/html" title="2019 FLAG" /><published>2019-07-21T15:44:00+08:00</published><updated>2019-07-21T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/21/myflag</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/21/myflag.html">&lt;p&gt;2019已过半，依然在华为。泰国回国后，CEA解散，换了小组，近期即将又要被调到新部门。被动的状态很危险，不做出改变，温水煮亲蛙，只会越来越被动。最近有朋友在头条让我去，虽托辞暂时没有跳槽意愿，但其实更多是因为没有积累，信心不足。常怀忧患意识，多为自己计量，才能在工作中掌握主动权，做到游刃有余，不至于狼狈不堪。&lt;/p&gt;
+&lt;p&gt;[参考资料]：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.51cto.com/xpleaf/2080181&quot;&gt;https://blog.51cto.com/xpleaf/2080181&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/Hadoop/3526507&quot;&gt;https://baike.baidu.com/item/Hadoop/3526507&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">2019 FLAG</title><link href="http://localhost:4000/jekyll/update/2019/07/21/myflag.html" rel="alternate" type="text/html" title="2019 FLAG" /><published>2019-07-21T15:44:00+08:00</published><updated>2019-07-21T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/21/myflag</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/21/myflag.html">&lt;p&gt;2019已过半，依然在华为。泰国回国后，CEA解散，换了小组，近期即将又要被调到新部门。被动的状态很危险，不做出改变，温水煮亲蛙，只会越来越被动。最近有朋友在头条让我去，虽托辞暂时没有跳槽意愿，但其实更多是因为没有积累，信心不足。常怀忧患意识，多为自己计量，才能在工作中掌握主动权，做到游刃有余，不至于狼狈不堪。&lt;/p&gt;
 
 &lt;p&gt;预想如果跳槽，还需做好三方面的准备：&lt;/p&gt;
 
