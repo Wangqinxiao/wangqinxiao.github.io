@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-11T19:36:31+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">Spark程序运行过程</title><link href="http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting.html" rel="alternate" type="text/html" title="Spark程序运行过程" /><published>2019-08-10T16:30:00+08:00</published><updated>2019-08-10T16:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting.html">&lt;p&gt;笔者在一线碰到过很多次Spark程序崩溃的问题，而且解决起来比较费劲。纠其根本原因在于开发人员在编写Spark程序时只注重功能实现，不了解Spark程序运行过程，程序性能不佳，导致现场运行问题频发。而解决问题的过程中，由于不了解运行过程，只能靠各种尝试，解决问题效率极低。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-11T21:14:30+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">《黑客与画家》句抄</title><link href="http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes.html" rel="alternate" type="text/html" title="《黑客与画家》句抄" /><published>2019-08-10T16:30:00+08:00</published><updated>2019-08-10T16:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes.html">&lt;p&gt;本周没有新的阅读。接&lt;a href=&quot;https://wangqinxiao.github.io/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html&quot;&gt;上篇&lt;/a&gt;继续整理下Hackers and Painters（黑客与画家）一书的句子。&lt;/p&gt;
+
+&lt;p&gt;《黑客与画家》是该书中的一篇文章。本文不讨论该文思想，只记录几个有所启发的句子。&lt;/p&gt;
+
+&lt;p&gt;1.&lt;code class=&quot;highlighter-rouge&quot;&gt;The only external test is time. Over time, beautiful things tend to thrive, and ugly things tend to get discarded. Unfortunately, the amounts of time involved can be longer than human lifetimes.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;任何事物的评判都需要一个标准，学术圈靠论文、职场靠KPI、相亲靠高富帅。作者认为黑客的工作更像艺术，难以有客观标准，唯有时间能检验出真理／美，但问题是时间往往会很长。时间的筛选虽然漫长，但无疑都是经典的普世文化。每个人都逃不过时间的宿命，如果能留下点什么有价值的痕迹，不枉此生；如果不能，在有限的时间里阅读时间长河留下的礼物，也是一件美事。&lt;/p&gt;
+
+&lt;p&gt;2.&lt;code class=&quot;highlighter-rouge&quot;&gt;Everyone in the sciences secretly believes that mathematicians are smarter than they are. I think mathematicians also believe this. At any rate, the result is that scientists tend to make their work look as mathematical as possible.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;人们都认为数学家是最聪明的群体。所以科学家们都喜欢把自己的工作变得像数学研究，最直接的体现就是在文章中使用公式和希腊字母。把问题数学抽象是一种归纳的方法，但不少投机之徒利用人们对数学的敬畏，故意制造障碍，以浑水摸鱼或装逼。此现象不可避免，唯一的方法就是自己掌握数学，才能识别出南郭先生。另一方面，如果真想让受众明白自己的表述，就能少用公式就少用，正如霍金曾经说过，“你多写一个公式，就会少一半的读者”。&lt;/p&gt;
+
+&lt;p&gt;3.&lt;code class=&quot;highlighter-rouge&quot;&gt;Empathy is probably the single most important difference between a good hacker and a great one. Some hackers are quite smart, but when it comes to empathy are practically solipsists. It's hard for such people to design great software, because they can't see things from the user's point of view.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;好的黑客和优秀黑客的区别在于是否拥有“同理心”，站在用户的角度思考，才能做出优秀的产品。演讲、写作、处理人际关系、谈恋爱亦如此。&lt;/p&gt;
+
+&lt;p&gt;4.&lt;code class=&quot;highlighter-rouge&quot;&gt;Programs should be written for people to read, and only incidentally for machines to execute.You need to have empathy not just for your users, but for your readers. It's in your interest, because you'll be one of them. Many a hacker has written a program only to find on returning to it six months later that he has no idea how it works. I know several people who've sworn off Perl after such experiences.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;程序是写给人看的，顺便让机器执行。作者认为开发者不仅要对用户有同理心，对程序的读者也要有同理心，这对开发者自己也有利，因为开发者自己也是读者的一份子。开发者如果便写的程序可读性差，可能自己几个月回来也看不懂了，更别说让其他人维护。正如乔布斯对待iPhone，不仅外表设计要完美，内部零件结构也要精益求精，正是这种态度才能造就经得起时间考验的艺术品。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/hp.html&quot;&gt;黑客与画家 原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">本周没有新的阅读。接上篇继续整理下Hackers and Painters（黑客与画家）一书的句子。</summary></entry><entry><title type="html">Spark程序运行过程</title><link href="http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting.html" rel="alternate" type="text/html" title="Spark程序运行过程" /><published>2019-08-10T16:30:00+08:00</published><updated>2019-08-10T16:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting.html">&lt;p&gt;笔者在一线碰到过很多次Spark程序崩溃的问题，而且解决起来比较费劲。纠其根本原因在于开发人员在编写Spark程序时只注重功能实现，不了解Spark程序运行过程，程序性能不佳，导致现场运行问题频发。而解决问题的过程中，由于不了解运行过程，只能靠各种尝试，解决问题效率极低。&lt;/p&gt;
 
 &lt;p&gt;总之，不了解Spark运行原理，就没法写出可靠的Spark程序。&lt;/p&gt;
 
@@ -55,7 +75,7 @@
 
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/TASK-SET.jpg&quot; alt=&quot;TASK-SET&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;7执行task&quot;&gt;7.执行Task&lt;/h1&gt;
+&lt;h1 id=&quot;7-执行task&quot;&gt;7. 执行Task&lt;/h1&gt;
 &lt;p&gt;TaskScheduler构建一个TaskSetManager的实例来管理一个TaskSet的生命周期，跟踪每一个task，如果task失败，负责重试task直到达到task重试次数的最多次数。&lt;/p&gt;
 
 &lt;p&gt;一个TaskSet在Executor中执行结束后，其结果会返回给DAGScheduler。如果得到TaskSet执行失败的信息，则会重新动态分配该Task到其他节点执行，直到重试次数的最多次数（根据笔者经验，应该是默认4次，如果继续失败，则程序崩溃）。&lt;/p&gt;
@@ -265,14 +285,4 @@
 
 &lt;p&gt;其实，想一想，主要还是思念那里的人吧。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">毕业南下工作后，总是常常思念北京。思念燕园和中关村，思念故宫和胡同，思念长城和香山，思念玩滑板喝酒的日子，思念在有序心无旁骛地写代码，甚至开始思念那拥挤的地铁、凛冽的北风。</summary></entry><entry><title type="html">生活要有仪式感</title><link href="http://localhost:4000/jekyll/update/2018/03/12/sense-of-ceremony.html" rel="alternate" type="text/html" title="生活要有仪式感" /><published>2018-03-12T20:02:00+08:00</published><updated>2018-03-12T20:02:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/03/12/sense-of-ceremony</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/12/sense-of-ceremony.html">&lt;p&gt;看到今天是植树节，突然想到，要是能去种一棵树就好了。在植树节种树，在清明节祭祖，读书前焚香沐浴，每天对爱人说一声我爱你，这应该就是具有仪式感的生活吧。充满敬意和仪式感的生活，想不到会怎么无趣，也很难虚度。&lt;/p&gt;
 
-&lt;p&gt;开始行动吧！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">看到今天是植树节，突然想到，要是能去种一棵树就好了。在植树节种树，在清明节祭祖，读书前焚香沐浴，每天对爱人说一声我爱你，这应该就是具有仪式感的生活吧。充满敬意和仪式感的生活，想不到会怎么无趣，也很难虚度。</summary></entry><entry><title type="html">最近一些想法的转变</title><link href="http://localhost:4000/jekyll/update/2018/03/11/change-in-mind.html" rel="alternate" type="text/html" title="最近一些想法的转变" /><published>2018-03-11T23:55:00+08:00</published><updated>2018-03-11T23:55:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/03/11/change-in-mind</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/11/change-in-mind.html">&lt;p&gt;最近，一些以前一直坚持的想法有了变化。&lt;/p&gt;
-
-&lt;p&gt;首先是什么是生命中最宝贵的东西？以前我一直认为人最重要的事情是让自己变得强大，人情反复，人心薄凉，感情最不可靠，只有自己强大了，才有人依附。我渴望爱，渴望被爱，但从没把它当作生命中最重要的事情。爱是生命中最重要的东西，这听起来既文青又圣母，但我折腾了那么多事，栽了那么多跟头，至今才真正明白这个道理。&lt;/p&gt;
-
-&lt;p&gt;以前对爱的理解太过肤浅，认为爱是靠自己吸引来的，很少想着付出。不主动关心家人，不向另一半表达爱。尤其是在感情上，认为爱情是感觉，是崇拜，是欣赏，是一种随心所欲的状态。从没意识到爱也是责任，是付出，是需要用心和行动去经营的宝贵财富。在校园里，我遇到了最真挚的爱，但是我没有珍惜，当时也没意识到那将是我一生中最宝贵的财富，最后还亲手毁了这一切，这是一件很残忍的事情。&lt;/p&gt;
-
-&lt;p&gt;第二是关于自我认识。自己并没有才，这是最近接受的一个事实，但依然可以做到足够珍贵，不可妄自菲薄。自己不是什么好人，但依然想接近真善美。自己几斤几两已大概有些清楚，不会再去追求不属于自己的东西……关于自我认识，越来越发现这是一个千古难题，还有很多路要走。&lt;/p&gt;
-
-&lt;p&gt;听妈妈说，最近老家有很多老人相继去世，姑奶刚入土，邻居那个热情的老奶奶又突然离去，二公听说又病重垂危，已经是在数着日子了，爷爷那一辈的人相继离开这个世界，父母那一代也将慢慢退出主舞台，突然意识到，这个世界已经被交到我们这一代人手中了。&lt;/p&gt;
-
-&lt;p&gt;到了一定的年龄就该有一个年龄的使命了，以前为赋新词强说愁总是感叹青春已逝，但从没有像现在这样感受强烈和真实。开始有年龄的恐慌，开始想结婚生子，开始不愿去折腾。 但同时也明白了自己的责任和自己的追求，找到了比生命更宝贵的东西并懂的如何守住它。成长的代价巨大，所以更要珍惜这种成长，努力过好这一生。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近，一些以前一直坚持的想法有了变化。</summary></entry></feed>
+&lt;p&gt;开始行动吧！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">看到今天是植树节，突然想到，要是能去种一棵树就好了。在植树节种树，在清明节祭祖，读书前焚香沐浴，每天对爱人说一声我爱你，这应该就是具有仪式感的生活吧。充满敬意和仪式感的生活，想不到会怎么无趣，也很难虚度。</summary></entry></feed>

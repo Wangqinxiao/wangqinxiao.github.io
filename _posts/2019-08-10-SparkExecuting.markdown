@@ -65,7 +65,7 @@ Job可进一步分为Stage。分配原则为根据DAG图，Job流程从后向前
 
 ![TASK-SET]({{ site.url }}/assets/images/TASK-SET.jpg)
 
-# 7.执行Task
+# 7. 执行Task
 TaskScheduler构建一个TaskSetManager的实例来管理一个TaskSet的生命周期，跟踪每一个task，如果task失败，负责重试task直到达到task重试次数的最多次数。
 
 一个TaskSet在Executor中执行结束后，其结果会返回给DAGScheduler。如果得到TaskSet执行失败的信息，则会重新动态分配该Task到其他节点执行，直到重试次数的最多次数（根据笔者经验，应该是默认4次，如果继续失败，则程序崩溃）。
