@@ -1,5 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-10T15:32:33+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">大数据处理二剑客之Spark</title><link href="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&Spark1.html" rel="alternate" type="text/html" title="大数据处理二剑客之Spark" /><published>2019-08-04T17:25:00+08:00</published><updated>2019-08-04T17:25:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-11T19:36:31+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">Spark程序运行过程</title><link href="http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting.html" rel="alternate" type="text/html" title="Spark程序运行过程" /><published>2019-08-10T16:30:00+08:00</published><updated>2019-08-10T16:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting.html">&lt;p&gt;笔者在一线碰到过很多次Spark程序崩溃的问题，而且解决起来比较费劲。纠其根本原因在于开发人员在编写Spark程序时只注重功能实现，不了解Spark程序运行过程，程序性能不佳，导致现场运行问题频发。而解决问题的过程中，由于不了解运行过程，只能靠各种尝试，解决问题效率极低。&lt;/p&gt;
+
+&lt;p&gt;总之，不了解Spark运行原理，就没法写出可靠的Spark程序。&lt;/p&gt;
+
+&lt;p&gt;现在就用一段Spark代码实例来一步一步解析Spark运行过程。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Spark program&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputPath1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputPath2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputPath3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtinone1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lines3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtinone&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtinone1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dtinone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAsTextFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dtinone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;程序运行过程如下：&lt;/p&gt;
+
+&lt;h1 id=&quot;1-资源配置&quot;&gt;1. 资源配置&lt;/h1&gt;
+&lt;p&gt;资源分配不由Spark程序决定，而是由资源管理管理器决定，如Hadoop Yarn。大数据计算需要大量硬件计算资源，资源分配决定着程序的运行性能。运行Spark程序前需要保证已配置足够可用的计算资源。资源配置参数包括，资源队列、Driver内存、Executor内存、Executor核数等等。&lt;/p&gt;
+
+&lt;p&gt;资源配置是Spark程序运行前的准备工作，本文暂且不做深入探讨。&lt;/p&gt;
+
+&lt;h1 id=&quot;2-创建sparkcontext&quot;&gt;2. 创建SparkContext&lt;/h1&gt;
+&lt;p&gt;运行Spark程序后，第一步Driver进程启动并创建SparkContext，即该Spark程序的专属运行环境。SparkContext负责资源的申请，任务的分配和管理。相当于Spark程序运行过程中的管理者。以下步骤，除了计算，其他几乎都有SparkContext来负责。&lt;/p&gt;
+
+&lt;p&gt;当程序运行完成后，Driver会关闭SparkContext。&lt;/p&gt;
+
+&lt;h1 id=&quot;3-启动executor&quot;&gt;3. 启动Executor&lt;/h1&gt;
+&lt;p&gt;SparkContext再创建完成后，会向资源管理器申请Executor资源，并启动Executor。&lt;/p&gt;
+
+&lt;h1 id=&quot;4-创建dag图&quot;&gt;4. 创建DAG图&lt;/h1&gt;
+&lt;p&gt;环境和资源一切就绪之后。SparkContext会根据Spark程序创建DAG（Directed Acycle graph，有向无环图），即反应所有RDD之间依赖关系的图。&lt;/p&gt;
+
+&lt;p&gt;本文示例的程序DAG图大致如下：（本图比较简易，默认RDD没有分区。基本元素单位应该是是RDD的分区）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/DAG.jpg&quot; alt=&quot;DAG&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;3-触发job&quot;&gt;3. 触发Job&lt;/h1&gt;
+&lt;p&gt;根据DAG图，一次RDD的Action触发一次Job（计算作业）。例如，示例代码中的saveAsTextFile就会触发一次Job。该Job包括对应RDD上的各种操作。&lt;/p&gt;
+
+&lt;h1 id=&quot;4-分配stagetaskset&quot;&gt;4. 分配Stage（TaskSet）&lt;/h1&gt;
+&lt;p&gt;Job可进一步分为Stage。分配原则为根据DAG图，Job流程从后向前，遇到宽依赖，则将当前的流程分为一个Stage。各个Stage一般并非只有线性关系，还有嵌套、并行关系。&lt;/p&gt;
+
+&lt;p&gt;本文代码例子的Stag划分如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/JOB.jpg&quot; alt=&quot;JOB&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一个Stage对应一个TaskSet，即包含多个Task的集合。每个Task对于一个RDD（分区）的操作。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/TASK.jpg&quot; alt=&quot;TASK&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;6-提交stagetaskset&quot;&gt;6. 提交Stage（TaskSet）&lt;/h1&gt;
+&lt;p&gt;提交Stage，也就是提交TaskSet。DAGScheduler通过TaskScheduler接口提交TaskSet给各个Executor，并以多线程的形式执行。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/TASK-SET.jpg&quot; alt=&quot;TASK-SET&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;7执行task&quot;&gt;7.执行Task&lt;/h1&gt;
+&lt;p&gt;TaskScheduler构建一个TaskSetManager的实例来管理一个TaskSet的生命周期，跟踪每一个task，如果task失败，负责重试task直到达到task重试次数的最多次数。&lt;/p&gt;
+
+&lt;p&gt;一个TaskSet在Executor中执行结束后，其结果会返回给DAGScheduler。如果得到TaskSet执行失败的信息，则会重新动态分配该Task到其他节点执行，直到重试次数的最多次数（根据笔者经验，应该是默认4次，如果继续失败，则程序崩溃）。&lt;/p&gt;
+
+&lt;p&gt;[参考资料]：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/liuxiangke0210/article/details/79687240&quot;&gt;https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">笔者在一线碰到过很多次Spark程序崩溃的问题，而且解决起来比较费劲。纠其根本原因在于开发人员在编写Spark程序时只注重功能实现，不了解Spark程序运行过程，程序性能不佳，导致现场运行问题频发。而解决问题的过程中，由于不了解运行过程，只能靠各种尝试，解决问题效率极低。</summary></entry><entry><title type="html">大数据处理二剑客之Spark</title><link href="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&Spark1.html" rel="alternate" type="text/html" title="大数据处理二剑客之Spark" /><published>2019-08-04T17:25:00+08:00</published><updated>2019-08-04T17:25:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
 
 &lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
 
@@ -210,10 +275,4 @@
 
 &lt;p&gt;听妈妈说，最近老家有很多老人相继去世，姑奶刚入土，邻居那个热情的老奶奶又突然离去，二公听说又病重垂危，已经是在数着日子了，爷爷那一辈的人相继离开这个世界，父母那一代也将慢慢退出主舞台，突然意识到，这个世界已经被交到我们这一代人手中了。&lt;/p&gt;
 
-&lt;p&gt;到了一定的年龄就该有一个年龄的使命了，以前为赋新词强说愁总是感叹青春已逝，但从没有像现在这样感受强烈和真实。开始有年龄的恐慌，开始想结婚生子，开始不愿去折腾。 但同时也明白了自己的责任和自己的追求，找到了比生命更宝贵的东西并懂的如何守住它。成长的代价巨大，所以更要珍惜这种成长，努力过好这一生。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近，一些以前一直坚持的想法有了变化。</summary></entry><entry><title type="html">选择</title><link href="http://localhost:4000/jekyll/update/2017/12/21/choice.html" rel="alternate" type="text/html" title="选择" /><published>2017-12-21T13:15:00+08:00</published><updated>2017-12-21T13:15:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/12/21/choice</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/12/21/choice.html">&lt;p&gt;最近，一位读MTI现于国企工作的同学跟我抱怨其工作前景暗淡，收入微薄，欲回校重造。我听后不胜唏嘘，他是一个挺努力的同学，成绩也不错，现在郁郁寡欢大概是因为选择不合适。&lt;/p&gt;
-
-&lt;p&gt;英语毕竟是一门工具，而且随着人工智能越来越成熟，机器翻译取代普通译员也是早晚的事，MTI作为扩招的产物，实在坑了不少学生。另一方面，在互联网时代，随着市场和政策的变化，国企的铁饭碗已经越来越没有多少优势了。如若还是用十年前的思维去做选择，便很容易被时代抛弃。在这个变化莫测的年代，选择真是太重要了。&lt;/p&gt;
-
-&lt;p&gt;我还是比较庆幸自己读研选择了CAT，恰逢时运幸我，开始走进了计算机的世界。爱折腾这毛病，在感情上是百害而无一利，但在人生方向的选择了上，有时却颇有裨益。我一直在尝试自己能做什么，适合做什么，翻译、新闻、CAT、老师、程序员等皆有尝试，目前看来程序员对我来说是一个在兴趣、收入、能力匹配上面都合适的选择，但看到满大街的程序员和不断的泡沫破裂传言，也在思考，如果有一天没有这么多需求，我该何去何从。所以工作最终还是选择去华为做网络技术工程师，听说这个岗位外派机会很多，一来收入会多些解我饱腹之忧，二来能闯荡世界安我这颗不安的心。已入职的老段说部门选择很多，做技术、做业务都可以，我听后很是向往，摩拳擦掌跃跃欲试。&lt;/p&gt;
-
-&lt;p&gt;看准时机，跳出舒适圈，尝试多种选择。但折腾固然有利有弊，每次选择都将是一生的改变，且行且谨慎。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近，一位读MTI现于国企工作的同学跟我抱怨其工作前景暗淡，收入微薄，欲回校重造。我听后不胜唏嘘，他是一个挺努力的同学，成绩也不错，现在郁郁寡欢大概是因为选择不合适。</summary></entry></feed>
+&lt;p&gt;到了一定的年龄就该有一个年龄的使命了，以前为赋新词强说愁总是感叹青春已逝，但从没有像现在这样感受强烈和真实。开始有年龄的恐慌，开始想结婚生子，开始不愿去折腾。 但同时也明白了自己的责任和自己的追求，找到了比生命更宝贵的东西并懂的如何守住它。成长的代价巨大，所以更要珍惜这种成长，努力过好这一生。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近，一些以前一直坚持的想法有了变化。</summary></entry></feed>
