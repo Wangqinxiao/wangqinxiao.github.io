@@ -1,0 +1,40 @@
+---
+layout: post
+title: MVX 模式
+sub-title: 十分经典的软件设计模式
+date: 2019-08-17 19:30 +0800
+categories: jekyll update
+---
+
+软件开发工作者经常会听到MVC，MVP，MVVM框架。这些MVX框架，不是具体的工程技术，而是一种软件设计的模式，将软件项目的开发从逻辑上分层，体现了软件工程中模块化和解藕的思想。
+
+众多MVX框架，都源于MVC，或者说是MVC的变种。
+
+### MVC
+
+MVC（Model-View-Controller, 模型-视图-控制器）。MVC模式最早出现在Java领域，随后衍生到前端开发等领域。
+
+MVC模式认为一个软件项目的代码在逻辑组织上应该分为三层，分别是模型层（M），视图层（V），控制器层（C）。模型层提供数据输入，视图层展示输出结果，控制器层进行逻辑处理。三层彼此独立，依靠接口通信。这种设计模式，避免不同逻辑层耦合，某一层的修改不涉及其他层的修改，其修改对其他层也不可见。这种设计让代码开发和维护起来更简单。
+
+MVC模式中各层的通信是单向的。一般是V或者用户发出请求给＝＝》C，然后C通知＝＝》M要准备哪些数据，M准备数据并发送给＝＝》V。
+
+### MVP
+
+MVP（Model-View-Presenter, 模型-视图-呈现器）。MVP在MVC的基础上改进，与MVC的不同是1）Contrller变成了Presenter，2）各层的通信变成了双向，3）V与M不再直接联系，所有通信经过P处理。减轻了View层的工作，对应增加了Presenter层的工作。
+
+### MVVM
+
+MVVM（Model-View-ViewModel, 模型-视图-视图模型）。MVVM进一步在MVP的基础上改进，与MVP的不同是1）Presenter变成了ViewModel，2）V与VM双向绑定，一方的变动会自动同步到另一方。
+
+现在的主流前端框架如Angualr就是采用MVVM模式。MVVM的设计思想：关注Js对象（Model）的变化，让MVVM框架去自动更新DOM（View）的状态，从而把开发者从操作DOM的繁琐步骤中解脱出来。
+
+> 我的理解：MVC，MVP还是MVVM的差异主要实在各层的分工上，无非是V层厚一点，或者C层工作职责多一点，具体的场景选什么看需求。但MVX核心思想没有变，那就是模块化和解藕，这是在任何软件项目开发中都应该遵循的原则。
+
+
+---------本文结束
+
+
+［参考文档］
+
+[http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html](http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html)
+[https://www.liaoxuefeng.com/wiki/1022910821149312/1108898947791072](https://www.liaoxuefeng.com/wiki/1022910821149312/1108898947791072)

@@ -1,5 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-12T23:00:44+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">《黑客与画家》句抄</title><link href="http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes.html" rel="alternate" type="text/html" title="《黑客与画家》句抄" /><published>2019-08-10T16:30:00+08:00</published><updated>2019-08-10T16:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes.html">&lt;p&gt;本周没有新的阅读。接&lt;a href=&quot;https://wangqinxiao.github.io/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html&quot;&gt;上篇&lt;/a&gt;继续整理下Hackers and Painters（黑客与画家）一书的句子。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-18T11:00:51+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">MVX 模式</title><link href="http://localhost:4000/jekyll/update/2019/08/17/MVX.html" rel="alternate" type="text/html" title="MVX 模式" /><published>2019-08-17T19:30:00+08:00</published><updated>2019-08-17T19:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/17/MVX</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/17/MVX.html">&lt;p&gt;软件开发工作者经常会听到MVC，MVP，MVVM框架。这些MVX框架，不是具体的工程技术，而是一种软件设计的模式，将软件项目的开发从逻辑上分层，体现了软件工程中模块化和解藕的思想。&lt;/p&gt;
+
+&lt;p&gt;众多MVX框架，都源于MVC，或者说是MVC的变种。&lt;/p&gt;
+
+&lt;h3 id=&quot;mvc&quot;&gt;MVC&lt;/h3&gt;
+
+&lt;p&gt;MVC（Model-View-Controller, 模型-视图-控制器）。MVC模式最早出现在Java领域，随后衍生到前端开发等领域。&lt;/p&gt;
+
+&lt;p&gt;MVC模式认为一个软件项目的代码在逻辑组织上应该分为三层，分别是模型层（M），视图层（V），控制器层（C）。模型层提供数据输入，视图层展示输出结果，控制器层进行逻辑处理。三层彼此独立，依靠接口通信。这种设计模式，避免不同逻辑层耦合，某一层的修改不涉及其他层的修改，其修改对其他层也不可见。这种设计让代码开发和维护起来更简单。&lt;/p&gt;
+
+&lt;p&gt;MVC模式中各层的通信是单向的。一般是V或者用户发出请求给＝＝》C，然后C通知＝＝》M要准备哪些数据，M准备数据并发送给＝＝》V。&lt;/p&gt;
+
+&lt;h3 id=&quot;mvp&quot;&gt;MVP&lt;/h3&gt;
+
+&lt;p&gt;MVP（Model-View-Presenter, 模型-视图-呈现器）。MVP在MVC的基础上改进，与MVC的不同是1）Contrller变成了Presenter，2）各层的通信变成了双向，3）V与M不再直接联系，所有通信经过P处理。减轻了View层的工作，对应增加了Presenter层的工作。&lt;/p&gt;
+
+&lt;h3 id=&quot;mvvm&quot;&gt;MVVM&lt;/h3&gt;
+
+&lt;p&gt;MVVM（Model-View-ViewModel, 模型-视图-视图模型）。MVVM进一步在MVP的基础上改进，与MVP的不同是1）Presenter变成了ViewModel，2）V与VM双向绑定，一方的变动会自动同步到另一方。&lt;/p&gt;
+
+&lt;p&gt;现在的主流前端框架如Angualr就是采用MVVM模式。MVVM的设计思想：关注Js对象（Model）的变化，让MVVM框架去自动更新DOM（View）的状态，从而把开发者从操作DOM的繁琐步骤中解脱出来。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;我的理解：MVC，MVP还是MVVM的差异主要实在各层的分工上，无非是V层厚一点，或者C层工作职责多一点，具体的场景选什么看需求。但MVX核心思想没有变，那就是模块化和解藕，这是在任何软件项目开发中都应该遵循的原则。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;———本文结束&lt;/p&gt;
+
+&lt;p&gt;［参考文档］&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html&quot;&gt;http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html&lt;/a&gt;
+&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/1022910821149312/1108898947791072&quot;&gt;https://www.liaoxuefeng.com/wiki/1022910821149312/1108898947791072&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">软件开发工作者经常会听到MVC，MVP，MVVM框架。这些MVX框架，不是具体的工程技术，而是一种软件设计的模式，将软件项目的开发从逻辑上分层，体现了软件工程中模块化和解藕的思想。</summary></entry><entry><title type="html">《黑客与画家》句抄</title><link href="http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes.html" rel="alternate" type="text/html" title="《黑客与画家》句抄" /><published>2019-08-10T16:30:00+08:00</published><updated>2019-08-10T16:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/10/hackers_and_painters_notes.html">&lt;p&gt;本周没有新的阅读。接&lt;a href=&quot;https://wangqinxiao.github.io/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html&quot;&gt;上篇&lt;/a&gt;继续整理下Hackers and Painters（黑客与画家）一书的句子。&lt;/p&gt;
 
 &lt;p&gt;《黑客与画家》是该书中的一篇文章。本文不讨论该文思想，只记录几个有所启发的句子。&lt;/p&gt;
 
@@ -283,6 +314,4 @@
 
 &lt;p&gt;又进入了迷茫期，不知道未来会是怎样？先留个记号。祝愿未来的自己不管职业怎样，首先能正直、能进步、能正确认识自己，再也不做那无是无非的糊涂人。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">入职华为已两月有余，现在还是在各种培训。上月暂时被派遣回部门，没有能闲扯的人，有些抑郁。这个月硬装培训倒是嘻嘻哈哈，乐呵的不行。明天就要回深圳部门了，不知未来具体要做什么？看邮件已经被分到了算法团队，会做大数据分析方向。数学一直是我的弱项，进入此领域最担心的问题胜任不了，目前还在强补。</summary></entry><entry><title type="html">思念北京</title><link href="http://localhost:4000/jekyll/update/2018/03/16/beijing.html" rel="alternate" type="text/html" title="思念北京" /><published>2018-03-16T00:00:00+08:00</published><updated>2018-03-16T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/03/16/beijing</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/16/beijing.html">&lt;p&gt;毕业南下工作后，总是常常思念北京。思念燕园和中关村，思念故宫和胡同，思念长城和香山，思念玩滑板喝酒的日子，思念在有序心无旁骛地写代码，甚至开始思念那拥挤的地铁、凛冽的北风。&lt;/p&gt;
 
-&lt;p&gt;其实，想一想，主要还是思念那里的人吧。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">毕业南下工作后，总是常常思念北京。思念燕园和中关村，思念故宫和胡同，思念长城和香山，思念玩滑板喝酒的日子，思念在有序心无旁骛地写代码，甚至开始思念那拥挤的地铁、凛冽的北风。</summary></entry><entry><title type="html">生活要有仪式感</title><link href="http://localhost:4000/jekyll/update/2018/03/12/sense-of-ceremony.html" rel="alternate" type="text/html" title="生活要有仪式感" /><published>2018-03-12T20:02:00+08:00</published><updated>2018-03-12T20:02:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/03/12/sense-of-ceremony</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/12/sense-of-ceremony.html">&lt;p&gt;看到今天是植树节，突然想到，要是能去种一棵树就好了。在植树节种树，在清明节祭祖，读书前焚香沐浴，每天对爱人说一声我爱你，这应该就是具有仪式感的生活吧。充满敬意和仪式感的生活，想不到会怎么无趣，也很难虚度。&lt;/p&gt;
-
-&lt;p&gt;开始行动吧！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">看到今天是植树节，突然想到，要是能去种一棵树就好了。在植树节种树，在清明节祭祖，读书前焚香沐浴，每天对爱人说一声我爱你，这应该就是具有仪式感的生活吧。充满敬意和仪式感的生活，想不到会怎么无趣，也很难虚度。</summary></entry></feed>
+&lt;p&gt;其实，想一想，主要还是思念那里的人吧。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">毕业南下工作后，总是常常思念北京。思念燕园和中关村，思念故宫和胡同，思念长城和香山，思念玩滑板喝酒的日子，思念在有序心无旁骛地写代码，甚至开始思念那拥挤的地铁、凛冽的北风。</summary></entry></feed>
