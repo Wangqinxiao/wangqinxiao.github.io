@@ -1,5 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-18T12:00:23+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">MVX 模式</title><link href="http://localhost:4000/jekyll/update/2019/08/17/MVX.html" rel="alternate" type="text/html" title="MVX 模式" /><published>2019-08-17T19:30:00+08:00</published><updated>2019-08-17T19:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/17/MVX</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/17/MVX.html">&lt;p&gt;软件开发工作者经常会听到MVC，MVP，MVVM框架。这些MVX框架，不是具体的工程技术，而是一种软件设计的模式，将软件项目的开发从逻辑上分层，体现了软件工程中模块化和解藕的思想。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-25T12:07:40+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">数据挖掘算法－随机森林</title><link href="http://localhost:4000/jekyll/update/2019/08/24/RF.html" rel="alternate" type="text/html" title="数据挖掘算法－随机森林" /><published>2019-08-24T11:30:00+08:00</published><updated>2019-08-24T11:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/24/RF</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/24/RF.html">&lt;p&gt;随机森林（Random Forest，简称RF）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。&lt;/p&gt;
+
+&lt;h3 id=&quot;应用场景&quot;&gt;应用场景&lt;/h3&gt;
+
+&lt;p&gt;了解一个算法，应该从其应用开始。&lt;/p&gt;
+
+&lt;p&gt;RF算法用于将样本进行分类（通常二分类）。例如，笔者在帮助运营商识别潜在离网用户（目的是将用户分为将要离网OR不离网两类）中就使用了RF算法。&lt;/p&gt;
+
+&lt;p&gt;RF算法的使用分为训练和推理两个阶段。&lt;/p&gt;
+
+&lt;p&gt;训练阶段，输入训练数据集，即各种指标＋标签，如“用户类型，使用时长，网络质量等等 ＋ 是否离网标签“，经过RF算法训练，输出模型（发现的特征规律）。训练后的模型可反复使用。&lt;/p&gt;
+
+&lt;p&gt;推理阶段，输入样本数据，经过训练阶段输出的RF模型识别，得到样本类别。&lt;/p&gt;
+
+&lt;p&gt;RF算法在分类领域应用广泛。&lt;/p&gt;
+
+&lt;h3 id=&quot;发展历史&quot;&gt;发展历史&lt;/h3&gt;
+
+&lt;p&gt;随机森林算法是基于决策树算法改进而来。上世纪八十年代Breiman等人发明了决策树算法，通过反复二分数据进行分类，例如通过西瓜数据判断好瓜坏瓜，先看瓜皮颜色深还是浅，然后看瓜蒂是否卷曲，直到得到分类结果。决策树算法这里暂不深入讲解。&lt;/p&gt;
+
+&lt;p&gt;2001年Breiman把多棵决策树组合成随机森林。随机森林顾名思义，该森林里面有很多的决策树，构造树的数据选择是随机的。进行分类时，输入样本进入森林，森林中的每一棵决策树对样本进行判断，看看这个样本应该属于哪一类，得票数最多的一类为最终分类结果。&lt;/p&gt;
+
+&lt;p&gt;与决策树相比，随机森林在运算量没有显著提高的前提下提高了预测精度(其随机性解决过拟合问题)。&lt;/p&gt;
+
+&lt;h3 id=&quot;工作原理&quot;&gt;工作原理&lt;/h3&gt;
+
+&lt;p&gt;训练：RF使用多棵决策树，在构建每棵决策树时，对训练集进行随机且有放回地采样（bootstrap sample）。&lt;/p&gt;
+
+&lt;p&gt;推理：RF训练出的模型包括多棵决策树，每棵决策树都是一个分类器，那么对于一个输入样本，N棵树会有N个分类结果。根据分类投票结果，将得票数最多的类别指定为最终输出，或者输出样本属于每个类别的概率。&lt;/p&gt;
+
+&lt;p&gt;这种使用Boostrap采样方法，结合几个模型降低泛化误差的技术思想（避免过拟合），称为Bagging（Bootstrap aggregating）。&lt;/p&gt;
+
+&lt;h3 id=&quot;优点和局限&quot;&gt;优点和局限&lt;/h3&gt;
+
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;在训练阶段，随机选择数据行和列，对于多特征、不平衡、特征遗失数据，效果良好。可不用做特征选择。&lt;/li&gt;
+  &lt;li&gt;（较神经网络）运算量低，（较决策树）精度高。&lt;/li&gt;
+  &lt;li&gt;可给出特征重要性（决策树也可以）。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;随机森林已经被证明在某些噪音（存在着错误或异常(偏离期望值)的数据）较大的分类或者回归问题上会过拟合。&lt;/li&gt;
+  &lt;li&gt;随机可能导致很多相似的决策树，影响真实结果。&lt;/li&gt;
+  &lt;li&gt;不适合处理特征较少的数据，结果可能会不好。&lt;/li&gt;
+  &lt;li&gt;比单棵决策树慢。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;总之，随机森林是一种适合处理多维（多特征）数据、不平衡、特征遗失数据的优秀分类和回归算法。&lt;/p&gt;
+
+&lt;p&gt;———本文结束&lt;/p&gt;
+
+&lt;p&gt;［参考文档］&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/Sakura55/article/details/81413036#11-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E5%8E%86%E5%8F%B2&quot;&gt;https://blog.csdn.net/Sakura55/article/details/81413036#11-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E5%8E%86%E5%8F%B2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/d4b32cccd747&quot;&gt;https://www.jianshu.com/p/d4b32cccd747&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">随机森林（Random Forest，简称RF）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。</summary></entry><entry><title type="html">MVX 模式</title><link href="http://localhost:4000/jekyll/update/2019/08/17/MVX.html" rel="alternate" type="text/html" title="MVX 模式" /><published>2019-08-17T19:30:00+08:00</published><updated>2019-08-17T19:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/17/MVX</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/17/MVX.html">&lt;p&gt;软件开发工作者经常会听到MVC，MVP，MVVM框架。这些MVX框架，不是具体的工程技术，而是一种软件设计的模式，将软件项目的开发从逻辑上分层，体现了软件工程中模块化和解藕的思想。&lt;/p&gt;
 
 &lt;p&gt;众多MVX框架，都源于MVC，或者说是MVC的变种。&lt;/p&gt;
 
@@ -312,6 +370,4 @@
 
 &lt;p&gt;现在看来，菊厂做Web前端开发机会不大，做业务扯皮看人脸色肯定无法忍受，做算法好像更偏研究应用，代码诗人可能要荒废了。大公司不免程序繁琐，效率慢，况且华为文化有时感觉跟自己八字不合。所以这段时间常常在思考自己是回归IT继续当一个快乐自由的小码农，还是先在华为观望观望。以前冲动吃过亏，这次应该会选择后者，至少观望半年吧。&lt;/p&gt;
 
-&lt;p&gt;又进入了迷茫期，不知道未来会是怎样？先留个记号。祝愿未来的自己不管职业怎样，首先能正直、能进步、能正确认识自己，再也不做那无是无非的糊涂人。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">入职华为已两月有余，现在还是在各种培训。上月暂时被派遣回部门，没有能闲扯的人，有些抑郁。这个月硬装培训倒是嘻嘻哈哈，乐呵的不行。明天就要回深圳部门了，不知未来具体要做什么？看邮件已经被分到了算法团队，会做大数据分析方向。数学一直是我的弱项，进入此领域最担心的问题胜任不了，目前还在强补。</summary></entry><entry><title type="html">思念北京</title><link href="http://localhost:4000/jekyll/update/2018/03/16/beijing.html" rel="alternate" type="text/html" title="思念北京" /><published>2018-03-16T00:00:00+08:00</published><updated>2018-03-16T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/03/16/beijing</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/16/beijing.html">&lt;p&gt;毕业南下工作后，总是常常思念北京。思念燕园和中关村，思念故宫和胡同，思念长城和香山，思念玩滑板喝酒的日子，思念在有序心无旁骛地写代码，甚至开始思念那拥挤的地铁、凛冽的北风。&lt;/p&gt;
-
-&lt;p&gt;其实，想一想，主要还是思念那里的人吧。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">毕业南下工作后，总是常常思念北京。思念燕园和中关村，思念故宫和胡同，思念长城和香山，思念玩滑板喝酒的日子，思念在有序心无旁骛地写代码，甚至开始思念那拥挤的地铁、凛冽的北风。</summary></entry></feed>
+&lt;p&gt;又进入了迷茫期，不知道未来会是怎样？先留个记号。祝愿未来的自己不管职业怎样，首先能正直、能进步、能正确认识自己，再也不做那无是无非的糊涂人。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">入职华为已两月有余，现在还是在各种培训。上月暂时被派遣回部门，没有能闲扯的人，有些抑郁。这个月硬装培训倒是嘻嘻哈哈，乐呵的不行。明天就要回深圳部门了，不知未来具体要做什么？看邮件已经被分到了算法团队，会做大数据分析方向。数学一直是我的弱项，进入此领域最担心的问题胜任不了，目前还在强补。</summary></entry></feed>
