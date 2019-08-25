@@ -1,5 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-25T12:07:40+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">数据挖掘算法－随机森林</title><link href="http://localhost:4000/jekyll/update/2019/08/24/RF.html" rel="alternate" type="text/html" title="数据挖掘算法－随机森林" /><published>2019-08-24T11:30:00+08:00</published><updated>2019-08-24T11:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/24/RF</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/24/RF.html">&lt;p&gt;随机森林（Random Forest，简称RF）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-25T23:23:07+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">关于自律</title><link href="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html" rel="alternate" type="text/html" title="关于自律" /><published>2019-08-25T23:00:00+08:00</published><updated>2019-08-25T23:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/25/self-discipline</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html">&lt;p&gt;自律能帮助我们去掉不好的习惯，把精力更高效地投入到对自己有益的事情上。人人都知道自律是好的，但每个人自律的目的不一样。马云的自律和一位中学生自律的目的就不一样。&lt;/p&gt;
+
+&lt;p&gt;近期发现，我自律的目的是为了获取安全感。自律学习是为了能保住工作，不至于失业；自律健身是为了健康，不至于猝死。&lt;/p&gt;
+
+&lt;p&gt;根据马斯洛需求层次理论，人类需求像阶梯一样从低到高按层次分为五种，分别是：生理需求、安全需求、社交需求、尊重需求和自我实现需求。这样来看，我还处在第二层：我当前一切活动的主要目的还是为了实现安全需求，偶尔涉及更高层。&lt;/p&gt;
+
+&lt;p&gt;对于芸芸大众来说，安全需求应该是最难实现的一层需求。财务自由是是实现安全需求最直接的方法，但赚钱是这个世上最难的事情之一（除了马云认为“赚钱是这个世上最简单的事”）。&lt;/p&gt;
+
+&lt;p&gt;我的自律就是为了持续赚更多的钱，以满足我的安全需求。如此，才能有机会实现后面更高层的需求。&lt;/p&gt;
+
+&lt;p&gt;———本文结束&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">自律能帮助我们去掉不好的习惯，把精力更高效地投入到对自己有益的事情上。人人都知道自律是好的，但每个人自律的目的不一样。马云的自律和一位中学生自律的目的就不一样。</summary></entry><entry><title type="html">数据挖掘算法－随机森林</title><link href="http://localhost:4000/jekyll/update/2019/08/25/RF.html" rel="alternate" type="text/html" title="数据挖掘算法－随机森林" /><published>2019-08-25T11:30:00+08:00</published><updated>2019-08-25T11:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/25/RF</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/25/RF.html">&lt;p&gt;随机森林（Random Forest，简称RF）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。&lt;/p&gt;
 
 &lt;h3 id=&quot;应用场景&quot;&gt;应用场景&lt;/h3&gt;
 
@@ -364,10 +374,4 @@
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/concordya.jpg&quot; alt=&quot;concordya&quot; /&gt;
 &lt;img src=&quot;http://localhost:4000/assets/images/concordya1.jpg&quot; alt=&quot;concordya1&quot; /&gt;
 &lt;img src=&quot;http://localhost:4000/assets/images/concordya2.jpg&quot; alt=&quot;concordya2&quot; /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/concordya3.jpg&quot; alt=&quot;concordya3&quot; /&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">虽然已经离开有序很久了，但当今天听到有序解散了，还是特别悲伤，就像失去了一位亲人。</summary></entry><entry><title type="html">华为留个记号</title><link href="http://localhost:4000/jekyll/update/2018/03/22/mark.html" rel="alternate" type="text/html" title="华为留个记号" /><published>2018-03-22T23:25:00+08:00</published><updated>2018-03-22T23:25:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/03/22/mark</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/22/mark.html">&lt;p&gt;入职华为已两月有余，现在还是在各种培训。上月暂时被派遣回部门，没有能闲扯的人，有些抑郁。这个月硬装培训倒是嘻嘻哈哈，乐呵的不行。明天就要回深圳部门了，不知未来具体要做什么？看邮件已经被分到了算法团队，会做大数据分析方向。数学一直是我的弱项，进入此领域最担心的问题胜任不了，目前还在强补。&lt;/p&gt;
-
-&lt;p&gt;以前好不容易找到一个属于自己的方向，Web前端开发，艺术与技术的结合，当时感觉简直就是为我开设的职位，在有序又遇到了完美的团队和BOSS，干的不能再顺心了。后来遇到了论文，回校待了一年，慢慢的有序北大帮也解散了，毕业后因为离开的太久我也不好意思再开口回去。另一方面，自己也想去大公司看一看，所以最终毕业后的第一份工作便选择了南下深圳入菊厂。&lt;/p&gt;
-
-&lt;p&gt;现在看来，菊厂做Web前端开发机会不大，做业务扯皮看人脸色肯定无法忍受，做算法好像更偏研究应用，代码诗人可能要荒废了。大公司不免程序繁琐，效率慢，况且华为文化有时感觉跟自己八字不合。所以这段时间常常在思考自己是回归IT继续当一个快乐自由的小码农，还是先在华为观望观望。以前冲动吃过亏，这次应该会选择后者，至少观望半年吧。&lt;/p&gt;
-
-&lt;p&gt;又进入了迷茫期，不知道未来会是怎样？先留个记号。祝愿未来的自己不管职业怎样，首先能正直、能进步、能正确认识自己，再也不做那无是无非的糊涂人。&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">入职华为已两月有余，现在还是在各种培训。上月暂时被派遣回部门，没有能闲扯的人，有些抑郁。这个月硬装培训倒是嘻嘻哈哈，乐呵的不行。明天就要回深圳部门了，不知未来具体要做什么？看邮件已经被分到了算法团队，会做大数据分析方向。数学一直是我的弱项，进入此领域最担心的问题胜任不了，目前还在强补。</summary></entry></feed>
+&lt;img src=&quot;http://localhost:4000/assets/images/concordya3.jpg&quot; alt=&quot;concordya3&quot; /&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">虽然已经离开有序很久了，但当今天听到有序解散了，还是特别悲伤，就像失去了一位亲人。</summary></entry></feed>
