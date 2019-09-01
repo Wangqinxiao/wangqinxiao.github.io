@@ -1,5 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-25T23:23:07+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">关于自律</title><link href="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html" rel="alternate" type="text/html" title="关于自律" /><published>2019-08-25T23:00:00+08:00</published><updated>2019-08-25T23:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/25/self-discipline</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html">&lt;p&gt;自律能帮助我们去掉不好的习惯，把精力更高效地投入到对自己有益的事情上。人人都知道自律是好的，但每个人自律的目的不一样。马云的自律和一位中学生自律的目的就不一样。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-01T22:18:50+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">数据挖掘算法－决策树</title><link href="http://localhost:4000/jekyll/update/2019/09/01/DecisionTree..html" rel="alternate" type="text/html" title="数据挖掘算法－决策树" /><published>2019-09-01T21:30:00+08:00</published><updated>2019-09-01T21:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/01/DecisionTree.</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/01/DecisionTree..html">&lt;p&gt;决策树（Decision Tree）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。&lt;/p&gt;
+
+&lt;p&gt;决策树算法用于将样本进行分类（通常二分类）。例如，著名的西瓜例子，根据瓜蒂形状、瓜皮颜色、敲瓜声音等特征，反复进行二分决策（瓜蒂卷的是好瓜，否则看瓜皮-瓜皮深的是好瓜，否则再听声音……），从而分类好瓜还是坏瓜。该算法决策的流程画出来像一颗倒置得树，因此得名“决策树”。&lt;/p&gt;
+
+&lt;p&gt;决策树算法在分类领域应用广泛，并再此基础上衍生了随机森林等经典数据挖掘算法。包含策树的典型算法有ID3、C4.5、CART等。ID3和C4.5用于分类，CART可用于分类与回归。具体算法另有文章讨论，本文只讨论决策树的核心思想。&lt;/p&gt;
+
+&lt;h3 id=&quot;决策树构建&quot;&gt;决策树构建&lt;/h3&gt;
+
+&lt;p&gt;决策树算法的关键在于树（即分类规则）的构建，其核心步骤包括：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;节点（特征）的选择及节点（特征）顺序。（第一步，先判断瓜蒂形状、瓜皮颜色还是敲瓜声音；第二步……）&lt;/li&gt;
+  &lt;li&gt;节点（特征）如何分裂。(根据瓜蒂形状如何进行先一步判断，例如瓜蒂卷，是好瓜，否则看瓜皮……)。&lt;/li&gt;
+  &lt;li&gt;剪枝。去掉多余的叶结点（分类结果），使其回退到父结点（特征），甚至更高的结点，然后将父结点或更高的结点改为新的叶结点。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;步骤1、2涉及到具体的算法，ID3，C4.5，CART各不相同：ID3使用信息增益，C4.5使用信息增益比，CART使用基尼指数。具体问题另有文章分别讨论。&lt;/p&gt;
+
+&lt;p&gt;步骤3可分为预剪枝和后剪枝，其目的是简化树，使其具有更好的泛化能力，避免过拟合。&lt;/p&gt;
+
+&lt;h3 id=&quot;预剪枝&quot;&gt;预剪枝&lt;/h3&gt;
+&lt;p&gt;预剪枝的思想是在构造决策树的同时进行剪枝，即在创建之前，先计算当前的划分是否能提升模型的泛化能力，如果不能的话，就不再创建分支，直接给出叶子节点（分类结果）。常见的预剪枝方法有：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;当决策树达到一定的深度的时候，停止分支；&lt;/li&gt;
+  &lt;li&gt;当到达当前节点的样本数量小于某个阈值的时候，停止分支；&lt;/li&gt;
+  &lt;li&gt;计算决策树每一次分裂对测试集的准确度是否提升，当没有提升或者提升程度小于某个阈值的时候，则停止分支；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;后剪枝&quot;&gt;后剪枝&lt;/h3&gt;
+&lt;p&gt;后剪枝是在决策树生长完成之后，对树进行剪枝，得到简化版的决策树。常见的后剪枝方法有：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;判断分支的熵的增加量是否小于某一阈值。如果是，则剪枝。&lt;/li&gt;
+  &lt;li&gt;用测试集进行判断，如果某分支剪掉后的准确率有所提升或者没有降低，就剪枝。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;优点和局限&quot;&gt;优点和局限&lt;/h3&gt;
+
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;较随机森林可解释性，性能好。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;容易过拟合。&lt;/li&gt;
+  &lt;li&gt;样本特征独立，忽略了特征之间的相关性。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;———本文结束&lt;/p&gt;
+
+&lt;p&gt;［参考文档］&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/luban/p/9412339.html&quot;&gt;https://www.cnblogs.com/luban/p/9412339.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/Oscar6280868/article/details/86158170&quot;&gt;https://blog.csdn.net/Oscar6280868/article/details/86158170&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">决策树（Decision Tree）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。</summary></entry><entry><title type="html">数据挖掘算法－ID3</title><link href="http://localhost:4000/jekyll/update/2019/09/01/ID3.1.html" rel="alternate" type="text/html" title="数据挖掘算法－ID3" /><published>2019-09-01T20:30:00+08:00</published><updated>2019-09-01T20:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/01/ID3.1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/01/ID3.1.html">&lt;p&gt;罗斯昆（J.R.Quinlan）1975年在悉尼大学提出了ID3（Iterative Dichotomiser 3，迭代而二分器三代）算法。该算法基于香农（Shannon C E.）在信息论中提出的信息熵的概念。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;信息熵表示信息量的度量，熵越大，表示可能发生的结果越多，不确定性越高。在分类场景中，对于一堆样本数据，如果信息熵高说明种类多，相反则种类少。对于特征数据，信息熵越大说明，该特征对于分类识别贡献高。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ID3算法将特征的信息增益作为特征选取顺序的依据。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;信息增益表示某个特征能够为分类带来多少“信息”。信息增益越高，表示该特征为分类提供的信息越多。如计算瓜蒂形状的信息增益 ＝ 样本数据总的信息熵 － 瓜蒂的信息熵。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;信息熵，信息增益的公式如下：
+&lt;img src=&quot;http://localhost:4000/assets/images/INFORMATIONH.png&quot; alt=&quot;INFORMATIONH&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;算法的关键在于1.如何选择特征的顺序，即第一步选择瓜蒂形状、瓜皮颜色还是敲瓜声音；2.如何分裂特征的属性，即如何根据瓜蒂形状划分瓜的种类。&lt;/p&gt;
+
+&lt;h3 id=&quot;id3&quot;&gt;ID3&lt;/h3&gt;
+
+&lt;p&gt;罗斯昆（J.R.Quinlan）1975年在悉尼大学提出了ID3（Iterative Dichotomiser 3，迭代而二分器三代）算法。该算法基于香农（Shannon C E.）在信息论中提出的信息熵的概念。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;信息熵表示信息量的度量，熵越大，表示可能发生的结果越多，不确定性越高。在分类场景中，对于一堆样本数据，如果信息熵高说明种类多，相反则种类少。对于特征数据，信息熵越大说明，该特征对于分类识别贡献高。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ID3算法将特征的信息增益作为特征选取顺序的依据。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;信息增益表示某个特征能够为分类带来多少“信息”。信息增益越高，表示该特征为分类提供的信息越多。如计算瓜蒂形状的信息增益 ＝ 样本数据总的信息熵 － 瓜蒂的信息熵。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;信息熵，信息增益的公式如下：
+&lt;img src=&quot;http://localhost:4000/assets/images/INFORMATIONH.png&quot; alt=&quot;INFORMATIONH&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;c45&quot;&gt;C4.5&lt;/h3&gt;
+&lt;p&gt;ID3算法在处理连续性属性存在问题。举个极端例子，如果一个特征是人的身份证号，那么该特征的信息增益值会很高。显然这不是我们想要的效果，因为这样的规则难以泛化。&lt;/p&gt;
+
+&lt;p&gt;J.R.Quinlan针对ID3算法的不足设计了C4.5算法。C4.5算法的核心是引入了信息增益率。信息增益率，&lt;/p&gt;
+
+&lt;p&gt;信息增益率(Gain-ratio)的公式如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/INFO.svg&quot; alt=&quot;INFO&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/GAIN_RATIO.svg&quot; alt=&quot;GAIN_RATIO&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cart&quot;&gt;CART&lt;/h3&gt;
+&lt;p&gt;Breiman.L.I等人在1984年提出了CART（Classification and Regression Tree）算法，即分类回归树算法。CART算法用基尼指数（Gini Index）代替了信息熵，用二叉树作为模型结构，所以不是直接通过属性值进行数据划分，该算法要在所有属性中找出最佳的二元划分。CART算法通过递归操作不断地对决策属性进行划分，同时利用验证数据对树模型进行优化。&lt;/p&gt;
+
+&lt;p&gt;其他的决策树变种还包括SPRINT，PUBLIC等，这里暂不讨论。&lt;/p&gt;
+
+&lt;h3 id=&quot;优点和局限&quot;&gt;优点和局限&lt;/h3&gt;
+
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;较随机森林，易于理解，性能好。&lt;/li&gt;
+  &lt;li&gt;（较神经网络）运算量低，（较决策树）精度高。&lt;/li&gt;
+  &lt;li&gt;可给出特征重要性（决策树也可以）。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;随机森林已经被证明在某些噪音（存在着错误或异常(偏离期望值)的数据）较大的分类或者回归问题上会过拟合。&lt;/li&gt;
+  &lt;li&gt;随机可能导致很多相似的决策树，影响真实结果。&lt;/li&gt;
+  &lt;li&gt;不适合处理特征较少的数据，结果可能会不好。&lt;/li&gt;
+  &lt;li&gt;比单棵决策树慢。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;总之，随机森林是一种适合处理多维（多特征）数据、不平衡、特征遗失数据的优秀分类和回归算法。&lt;/p&gt;
+
+&lt;p&gt;———本文结束&lt;/p&gt;
+
+&lt;p&gt;［参考文档］&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/69dbb042a0e3&quot;&gt;https://www.jianshu.com/p/69dbb042a0e3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/d4b32cccd747&quot;&gt;https://www.jianshu.com/p/d4b32cccd747&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;https://www.cnblogs.com/luban/p/9412339.html&lt;/p&gt;
+
+&lt;p&gt;https://blog.csdn.net/Oscar6280868/article/details/86158170&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">罗斯昆（J.R.Quinlan）1975年在悉尼大学提出了ID3（Iterative Dichotomiser 3，迭代而二分器三代）算法。该算法基于香农（Shannon C E.）在信息论中提出的信息熵的概念。</summary></entry><entry><title type="html">关于自律</title><link href="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html" rel="alternate" type="text/html" title="关于自律" /><published>2019-08-25T23:00:00+08:00</published><updated>2019-08-25T23:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/25/self-discipline</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html">&lt;p&gt;自律能帮助我们去掉不好的习惯，把精力更高效地投入到对自己有益的事情上。人人都知道自律是好的，但每个人自律的目的不一样。马云的自律和一位中学生自律的目的就不一样。&lt;/p&gt;
 
 &lt;p&gt;近期发现，我自律的目的是为了获取安全感。自律学习是为了能保住工作，不至于失业；自律健身是为了健康，不至于猝死。&lt;/p&gt;
 
@@ -329,49 +462,4 @@
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.51cto.com/xpleaf/2080181&quot;&gt;https://blog.51cto.com/xpleaf/2080181&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/Hadoop/3526507&quot;&gt;https://baike.baidu.com/item/Hadoop/3526507&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">2019 FLAG</title><link href="http://localhost:4000/jekyll/update/2019/07/21/myflag.html" rel="alternate" type="text/html" title="2019 FLAG" /><published>2019-07-21T15:44:00+08:00</published><updated>2019-07-21T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/21/myflag</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/21/myflag.html">&lt;p&gt;2019已过半，依然在华为。泰国回国后，CEA解散，换了小组，近期即将又要被调到新部门。被动的状态很危险，不做出改变，温水煮亲蛙，只会越来越被动。最近有朋友在头条让我去，虽托辞暂时没有跳槽意愿，但其实更多是因为没有积累，信心不足。常怀忧患意识，多为自己计量，才能在工作中掌握主动权，做到游刃有余，不至于狼狈不堪。&lt;/p&gt;
-
-&lt;p&gt;预想如果跳槽，还需做好三方面的准备：&lt;/p&gt;
-
-&lt;h1 id=&quot;1-技术&quot;&gt;1. 技术&lt;/h1&gt;
-
-&lt;p&gt;技术是职场的立身之本。&lt;/p&gt;
-
-&lt;p&gt;技术需要形成体系，兼顾广度和深度。当前做的是大数据、机器学习领域，一要理解各种算法思想，如分类、聚类、预测、评估等常用数据分析算法，及其业务场景下应用和延伸；二要熟悉落地工程，如Spark、Hadoop、SQL、Python、Scala，及其相互关系，技术架构和应用经验。&lt;/p&gt;
-
-&lt;p&gt;每有体会，要常写博客，帮助自己梳理技术知识脉络。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Flag：每周一篇技术博客输出.&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;2-视野&quot;&gt;2. 视野&lt;/h1&gt;
-
-&lt;p&gt;靠技术可以混口饭吃，但要更上一层楼，视野必不可少。&lt;/p&gt;
-
-&lt;p&gt;计算机世界的发展方向？互联网的下一个风口？君子生财之道？常思考，多读书。每有所得，要总结记录下来。&lt;/p&gt;
-
-&lt;p&gt;知道如何使用技术驱动商业价值，甚至改变世界，才是一个熟练操作工和XX师的区别。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Flag：每周一篇文化博客输出.&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;3-证书&quot;&gt;3. 证书&lt;/h1&gt;
-
-&lt;p&gt;权威机构颁发的证书是证明自己实力的重要方式。&lt;/p&gt;
-
-&lt;p&gt;面试由于时间和经历的有限，很难通过几个小时展示自己。高含金量的证书则可以为履历增彩不少，少了很多口舌，增加不少信心。&lt;/p&gt;
-
-&lt;p&gt;大数据领域有 Cloudera 认证体系较为权威，可立为目标，以考促学。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Flag：取得一CCA证书。&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;—————————————————————————&lt;/p&gt;
-
-&lt;p&gt;先就这样吧，Flag不要立的太多！&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">2019已过半，依然在华为。泰国回国后，CEA解散，换了小组，近期即将又要被调到新部门。被动的状态很危险，不做出改变，温水煮亲蛙，只会越来越被动。最近有朋友在头条让我去，虽托辞暂时没有跳槽意愿，但其实更多是因为没有积累，信心不足。常怀忧患意识，多为自己计量，才能在工作中掌握主动权，做到游刃有余，不至于狼狈不堪。</summary></entry><entry><title type="html">有序的故事</title><link href="http://localhost:4000/jekyll/update/2018/04/08/concordy.html" rel="alternate" type="text/html" title="有序的故事" /><published>2018-04-08T23:52:00+08:00</published><updated>2018-04-08T23:52:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/04/08/concordy</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/04/08/concordy.html">&lt;p&gt;虽然已经离开有序很久了，但当今天听到有序解散了，还是特别悲伤，就像失去了一位亲人。&lt;/p&gt;
-
-&lt;p&gt;当初作为一个迷茫的实习生进入有序，在那里开始了我的代码之路，而且工作颇受赏识，终于找到了自己职业的方向和自信，所以一直心怀感动。毕业后经过利弊权衡，最终还是选择了抱大公司的大腿，因此自己也一直因未能跟培养我的公司一起成长而耿耿于怀，心生羞愧。&lt;/p&gt;
-
-&lt;p&gt;对于有序我有一种很特别的情感，我很思念它。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/concordya.jpg&quot; alt=&quot;concordya&quot; /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/concordya1.jpg&quot; alt=&quot;concordya1&quot; /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/concordya2.jpg&quot; alt=&quot;concordya2&quot; /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/concordya3.jpg&quot; alt=&quot;concordya3&quot; /&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">虽然已经离开有序很久了，但当今天听到有序解散了，还是特别悲伤，就像失去了一位亲人。</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry></feed>
