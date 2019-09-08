@@ -1,5 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-01T22:18:50+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">数据挖掘算法－决策树</title><link href="http://localhost:4000/jekyll/update/2019/09/01/DecisionTree..html" rel="alternate" type="text/html" title="数据挖掘算法－决策树" /><published>2019-09-01T21:30:00+08:00</published><updated>2019-09-01T21:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/01/DecisionTree.</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/01/DecisionTree..html">&lt;p&gt;决策树（Decision Tree）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-08T16:12:26+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">决策树算法 ID3, C4.5, CART</title><link href="http://localhost:4000/jekyll/update/2019/09/07/ID3.html" rel="alternate" type="text/html" title="决策树算法 ID3, C4.5, CART" /><published>2019-09-07T18:30:00+08:00</published><updated>2019-09-07T18:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/07/ID3</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/07/ID3.html">&lt;p&gt;决策树通过不断的特征二分决策，给出样本的类别。在这一过程中，有三个核心步骤：1.节点（特征，也称属性）的选择及节点顺序。2.节点如何划分。3.剪枝，剔除多余的分支，形成最终的树。决策树经典算法ID3，C4.5和CART的主要区别在第一个步骤，即特征的选择和使用顺序上用到的算法不同。&lt;/p&gt;
+
+&lt;h2 id=&quot;id3-基于信息增益&quot;&gt;ID3-基于信息增益&lt;/h2&gt;
+&lt;p&gt;ID3（Iterative Dichotomiser 3，迭代二分器三代）由罗斯昆（J.R.Quinlan）1975年在悉尼大学提出了ID3算法。该算法基于香农（Shannon C E.）在信息论中提出的信息熵的概念。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;信息熵表示信息量的度量，熵越大，表示可能发生的结果越多，不确定性越高。在分类场景中，对于一堆样本数据，如果信息熵高说明种类多，纯度越低，相反则种类少，纯度越高。对于特征数据，信息熵越小说明该特征分类后的纯度越高，对分类系统越有效。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;为了更直观的理解，可将信息熵转化为信息增益。ID3算法将特征的信息增益作为特征选取顺序的依据。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;信息增益表示某个特征能够为分类带来多少“信息”。信息增益越高，表示该特征为分类提供的信息越多。如计算瓜蒂形状的信息增益 ＝ 样本数据总的信息熵 － 瓜蒂分类后的信息熵。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;信息熵，信息增益的公式如下：
+&lt;img src=&quot;http://localhost:4000/assets/images/INFORMATIONH.png&quot; alt=&quot;INFORMATIONH&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;关于信息熵和信息增益，推荐&lt;a href=&quot;https://www.jianshu.com/p/69dbb042a0e3&quot;&gt;https://www.jianshu.com/p/69dbb042a0e3&lt;/a&gt;中例子，很直观。&lt;/p&gt;
+
+&lt;p&gt;ID3使用信息增益来进行特征的选择，存在的问题是，属性值多的指标（如身份证号）往往信息增益会大，因此在选择时对于多属性值的特征有偏好。&lt;/p&gt;
+
+&lt;h2 id=&quot;c45基于信息增益率&quot;&gt;C4.5－基于信息增益率&lt;/h2&gt;
+&lt;p&gt;罗斯昆在自己的ID3算法基础上进行扩展，提出了C4.5算法。C4.5也是基于信息熵的概念，与ID3不同是，使用了信息增益率。信息增益率在评估特征时，把属性值的数量也考虑了进去，从而避免了属性值过多影响判断的问题。&lt;/p&gt;
+
+&lt;p&gt;特征属性值数目越多，则IV(a)的值越大，信息增益率越小，一定程度上削弱了“对属性值多的特征”的偏好，但是同时也可能出现“对属性值少的特征”的偏好的问题。&lt;/p&gt;
+
+&lt;h2 id=&quot;c45基于基尼指数&quot;&gt;C4.5－基于基尼指数&lt;/h2&gt;
+
+&lt;p&gt;CART（Classification And Regression Tree，分类回归树）Leo Breiman, Jerome Friedman, Richard Olshen与Charles Stone于1984年提出。CART和ID3、C4.5算法不同的之处在于：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;ID3、C4.5算法都是基于信息熵来进行划分节点选取，主要用于分类问题，分类和回归问题都可以使用。本文直讨论分类。&lt;/li&gt;
+  &lt;li&gt;在节点划分时，只做二元划分。比如特征颜色取值红、黄、蓝，ID3和C4.5直接就划分为红、黄、蓝三个子类，而CART会划分为｛红｝和｛黄、蓝｝，或者｛红，黄｝和｛蓝｝，穷举所有组合。这样的好处是可以避免特征属性值数目多少的偏好问题。但准确率会有所降低。&lt;/li&gt;
+  &lt;li&gt;CART划分的标准是使用基尼指数。当样本越不均匀，基尼指数越小。因此，我们可以先选取划分后基尼指数最小的特征（最能够区分样本）进行划分。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;基尼指数公式如下：
+&lt;img src=&quot;http://localhost:4000/assets/images/GINI.SVG&quot; alt=&quot;GINI&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;例如，一个节点N划分后，子节点a中类0为1个，类1为5个，子节点b中类0为4个，类1为1个，则Gini(N
+) ＝ |a|/|N|&lt;em&gt;Gini(a) + |b|/|N|&lt;/em&gt;Gini(b) = 6/11&lt;em&gt;(1-((1/6)&lt;/em&gt;(1/6)+(5/6)&lt;em&gt;(5/6))) + 5/11&lt;/em&gt;(1-((4/5)&lt;em&gt;(4/5)+(1/5)&lt;/em&gt;(1/5)))&lt;/p&gt;
+
+&lt;p&gt;———本文结束&lt;/p&gt;
+
+&lt;p&gt;［参考文档］&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/69dbb042a0e3&quot;&gt;https://www.jianshu.com/p/69dbb042a0e3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27313529&quot;&gt;https://zhuanlan.zhihu.com/p/27313529&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;《数据挖掘导论》&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">决策树通过不断的特征二分决策，给出样本的类别。在这一过程中，有三个核心步骤：1.节点（特征，也称属性）的选择及节点顺序。2.节点如何划分。3.剪枝，剔除多余的分支，形成最终的树。决策树经典算法ID3，C4.5和CART的主要区别在第一个步骤，即特征的选择和使用顺序上用到的算法不同。</summary></entry><entry><title type="html">数据挖掘算法－决策树</title><link href="http://localhost:4000/jekyll/update/2019/09/01/DecisionTree..html" rel="alternate" type="text/html" title="数据挖掘算法－决策树" /><published>2019-09-01T21:30:00+08:00</published><updated>2019-09-01T21:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/01/DecisionTree.</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/01/DecisionTree..html">&lt;p&gt;决策树（Decision Tree）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。&lt;/p&gt;
 
 &lt;p&gt;决策树算法用于将样本进行分类（通常二分类）。例如，著名的西瓜例子，根据瓜蒂形状、瓜皮颜色、敲瓜声音等特征，反复进行二分决策（瓜蒂卷的是好瓜，否则看瓜皮-瓜皮深的是好瓜，否则再听声音……），从而分类好瓜还是坏瓜。该算法决策的流程画出来像一颗倒置得树，因此得名“决策树”。&lt;/p&gt;
 
@@ -9,12 +59,19 @@
 
 &lt;p&gt;决策树算法的关键在于树（即分类规则）的构建，其核心步骤包括：&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;节点（特征）的选择及节点（特征）顺序。（第一步，先判断瓜蒂形状、瓜皮颜色还是敲瓜声音；第二步……）&lt;/li&gt;
-  &lt;li&gt;节点（特征）如何分裂。(根据瓜蒂形状如何进行先一步判断，例如瓜蒂卷，是好瓜，否则看瓜皮……)。&lt;/li&gt;
+  &lt;li&gt;节点（特征，也称属性）的选择及节点（特征）顺序。（第一步，先判断瓜蒂形状、瓜皮颜色还是敲瓜声音；第二步……）&lt;/li&gt;
+  &lt;li&gt;节点如何划分。(根据瓜蒂形状如何进行先一步判断，例如瓜蒂卷，是好瓜，否则看瓜皮……)。&lt;/li&gt;
   &lt;li&gt;剪枝。去掉多余的叶结点（分类结果），使其回退到父结点（特征），甚至更高的结点，然后将父结点或更高的结点改为新的叶结点。&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;步骤1、2涉及到具体的算法，ID3，C4.5，CART各不相同：ID3使用信息增益，C4.5使用信息增益比，CART使用基尼指数。具体问题另有文章分别讨论。&lt;/p&gt;
+&lt;p&gt;步骤1涉及到具体的算法，ID3，C4.5，CART各不相同：ID3使用信息增益，C4.5使用信息增益比，CART使用基尼指数。具体问题另有文章分别讨论。&lt;/p&gt;
+
+&lt;p&gt;步骤2节点划分。节点的数据分为离散数据和连续数据，在处理离散数据时，可以将对应的属性值作为分支，或分组输出。在处理连续数据时，需要找到最佳划分点。例如一个特征的属性值范围是1-100，那么到底选择哪个点进行分类划分最为合理？&lt;/p&gt;
+
+&lt;h3 id=&quot;最佳划分&quot;&gt;最佳划分&lt;/h3&gt;
+&lt;p&gt;选择最佳划分的度量通常是根据划分后的子节点的纯度。纯度越高，说明划分后的分类越倾斜，也就越能达到分类的目的。纯度的度量一般可以用熵、基尼指数或分类误差。&lt;/p&gt;
+
+&lt;p&gt;熵的值范围为0-1，基尼指数和分类误差值范围为0-0.5。&lt;/p&gt;
 
 &lt;p&gt;步骤3可分为预剪枝和后剪枝，其目的是简化树，使其具有更好的泛化能力，避免过拟合。&lt;/p&gt;
 
@@ -52,87 +109,7 @@
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/luban/p/9412339.html&quot;&gt;https://www.cnblogs.com/luban/p/9412339.html&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/Oscar6280868/article/details/86158170&quot;&gt;https://blog.csdn.net/Oscar6280868/article/details/86158170&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">决策树（Decision Tree）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。</summary></entry><entry><title type="html">数据挖掘算法－ID3</title><link href="http://localhost:4000/jekyll/update/2019/09/01/ID3.1.html" rel="alternate" type="text/html" title="数据挖掘算法－ID3" /><published>2019-09-01T20:30:00+08:00</published><updated>2019-09-01T20:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/01/ID3.1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/01/ID3.1.html">&lt;p&gt;罗斯昆（J.R.Quinlan）1975年在悉尼大学提出了ID3（Iterative Dichotomiser 3，迭代而二分器三代）算法。该算法基于香农（Shannon C E.）在信息论中提出的信息熵的概念。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;信息熵表示信息量的度量，熵越大，表示可能发生的结果越多，不确定性越高。在分类场景中，对于一堆样本数据，如果信息熵高说明种类多，相反则种类少。对于特征数据，信息熵越大说明，该特征对于分类识别贡献高。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ID3算法将特征的信息增益作为特征选取顺序的依据。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;信息增益表示某个特征能够为分类带来多少“信息”。信息增益越高，表示该特征为分类提供的信息越多。如计算瓜蒂形状的信息增益 ＝ 样本数据总的信息熵 － 瓜蒂的信息熵。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;信息熵，信息增益的公式如下：
-&lt;img src=&quot;http://localhost:4000/assets/images/INFORMATIONH.png&quot; alt=&quot;INFORMATIONH&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;算法的关键在于1.如何选择特征的顺序，即第一步选择瓜蒂形状、瓜皮颜色还是敲瓜声音；2.如何分裂特征的属性，即如何根据瓜蒂形状划分瓜的种类。&lt;/p&gt;
-
-&lt;h3 id=&quot;id3&quot;&gt;ID3&lt;/h3&gt;
-
-&lt;p&gt;罗斯昆（J.R.Quinlan）1975年在悉尼大学提出了ID3（Iterative Dichotomiser 3，迭代而二分器三代）算法。该算法基于香农（Shannon C E.）在信息论中提出的信息熵的概念。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;信息熵表示信息量的度量，熵越大，表示可能发生的结果越多，不确定性越高。在分类场景中，对于一堆样本数据，如果信息熵高说明种类多，相反则种类少。对于特征数据，信息熵越大说明，该特征对于分类识别贡献高。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ID3算法将特征的信息增益作为特征选取顺序的依据。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;信息增益表示某个特征能够为分类带来多少“信息”。信息增益越高，表示该特征为分类提供的信息越多。如计算瓜蒂形状的信息增益 ＝ 样本数据总的信息熵 － 瓜蒂的信息熵。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;信息熵，信息增益的公式如下：
-&lt;img src=&quot;http://localhost:4000/assets/images/INFORMATIONH.png&quot; alt=&quot;INFORMATIONH&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;c45&quot;&gt;C4.5&lt;/h3&gt;
-&lt;p&gt;ID3算法在处理连续性属性存在问题。举个极端例子，如果一个特征是人的身份证号，那么该特征的信息增益值会很高。显然这不是我们想要的效果，因为这样的规则难以泛化。&lt;/p&gt;
-
-&lt;p&gt;J.R.Quinlan针对ID3算法的不足设计了C4.5算法。C4.5算法的核心是引入了信息增益率。信息增益率，&lt;/p&gt;
-
-&lt;p&gt;信息增益率(Gain-ratio)的公式如下：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/INFO.svg&quot; alt=&quot;INFO&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/GAIN_RATIO.svg&quot; alt=&quot;GAIN_RATIO&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;cart&quot;&gt;CART&lt;/h3&gt;
-&lt;p&gt;Breiman.L.I等人在1984年提出了CART（Classification and Regression Tree）算法，即分类回归树算法。CART算法用基尼指数（Gini Index）代替了信息熵，用二叉树作为模型结构，所以不是直接通过属性值进行数据划分，该算法要在所有属性中找出最佳的二元划分。CART算法通过递归操作不断地对决策属性进行划分，同时利用验证数据对树模型进行优化。&lt;/p&gt;
-
-&lt;p&gt;其他的决策树变种还包括SPRINT，PUBLIC等，这里暂不讨论。&lt;/p&gt;
-
-&lt;h3 id=&quot;优点和局限&quot;&gt;优点和局限&lt;/h3&gt;
-
-&lt;p&gt;优点：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;较随机森林，易于理解，性能好。&lt;/li&gt;
-  &lt;li&gt;（较神经网络）运算量低，（较决策树）精度高。&lt;/li&gt;
-  &lt;li&gt;可给出特征重要性（决策树也可以）。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;缺点：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;随机森林已经被证明在某些噪音（存在着错误或异常(偏离期望值)的数据）较大的分类或者回归问题上会过拟合。&lt;/li&gt;
-  &lt;li&gt;随机可能导致很多相似的决策树，影响真实结果。&lt;/li&gt;
-  &lt;li&gt;不适合处理特征较少的数据，结果可能会不好。&lt;/li&gt;
-  &lt;li&gt;比单棵决策树慢。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;总之，随机森林是一种适合处理多维（多特征）数据、不平衡、特征遗失数据的优秀分类和回归算法。&lt;/p&gt;
-
-&lt;p&gt;———本文结束&lt;/p&gt;
-
-&lt;p&gt;［参考文档］&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/69dbb042a0e3&quot;&gt;https://www.jianshu.com/p/69dbb042a0e3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/d4b32cccd747&quot;&gt;https://www.jianshu.com/p/d4b32cccd747&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;https://www.cnblogs.com/luban/p/9412339.html&lt;/p&gt;
-
-&lt;p&gt;https://blog.csdn.net/Oscar6280868/article/details/86158170&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">罗斯昆（J.R.Quinlan）1975年在悉尼大学提出了ID3（Iterative Dichotomiser 3，迭代而二分器三代）算法。该算法基于香农（Shannon C E.）在信息论中提出的信息熵的概念。</summary></entry><entry><title type="html">关于自律</title><link href="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html" rel="alternate" type="text/html" title="关于自律" /><published>2019-08-25T23:00:00+08:00</published><updated>2019-08-25T23:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/25/self-discipline</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html">&lt;p&gt;自律能帮助我们去掉不好的习惯，把精力更高效地投入到对自己有益的事情上。人人都知道自律是好的，但每个人自律的目的不一样。马云的自律和一位中学生自律的目的就不一样。&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">决策树（Decision Tree）是十大经典数据挖掘／机器学习算法，用于分类和回归。本文主要讨论分类。</summary></entry><entry><title type="html">关于自律</title><link href="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html" rel="alternate" type="text/html" title="关于自律" /><published>2019-08-25T23:00:00+08:00</published><updated>2019-08-25T23:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/25/self-discipline</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/25/self-discipline.html">&lt;p&gt;自律能帮助我们去掉不好的习惯，把精力更高效地投入到对自己有益的事情上。人人都知道自律是好的，但每个人自律的目的不一样。马云的自律和一位中学生自律的目的就不一样。&lt;/p&gt;
 
 &lt;p&gt;近期发现，我自律的目的是为了获取安全感。自律学习是为了能保住工作，不至于失业；自律健身是为了健康，不至于猝死。&lt;/p&gt;
 
