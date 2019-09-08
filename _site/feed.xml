@@ -1,5 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-08T16:12:26+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">决策树算法 ID3, C4.5, CART</title><link href="http://localhost:4000/jekyll/update/2019/09/07/ID3.html" rel="alternate" type="text/html" title="决策树算法 ID3, C4.5, CART" /><published>2019-09-07T18:30:00+08:00</published><updated>2019-09-07T18:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/07/ID3</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/07/ID3.html">&lt;p&gt;决策树通过不断的特征二分决策，给出样本的类别。在这一过程中，有三个核心步骤：1.节点（特征，也称属性）的选择及节点顺序。2.节点如何划分。3.剪枝，剔除多余的分支，形成最终的树。决策树经典算法ID3，C4.5和CART的主要区别在第一个步骤，即特征的选择和使用顺序上用到的算法不同。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-08T18:20:07+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">《不能说的话》</title><link href="http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say.html" rel="alternate" type="text/html" title="《不能说的话》" /><published>2019-09-08T17:30:00+08:00</published><updated>2019-09-08T17:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say.html">&lt;p&gt;《不能说的话》（What You Can’t Say）是《黑客与画家》书中的一篇文章。本文不讨论该文思想，只记录几个有所启发的句子。&lt;/p&gt;
+
+&lt;p&gt;1.&lt;code class=&quot;highlighter-rouge&quot;&gt;The statements that make people mad are the ones they worry might be believed. I suspect the statements that make people maddest are those they worry might be true.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;人们不喜欢听的话其实往往是他们相信的话。如果一句话使对方反应越大，说明他越相信会是真的。“身正不怕影子歪”，“欲盖弥彰”也是这个道理。测试一个人或对方是否心虚，可以用这种方法。&lt;/p&gt;
+
+&lt;p&gt;2.&lt;code class=&quot;highlighter-rouge&quot;&gt;Great work tends to grow out of ideas that others have overlooked, and no idea is so overlooked as one that's unthinkable.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;优秀的作品往往来自被人忽视的想法，而最被人忽视的想法就是那些被禁止的想法。纵观古今中外历史，唯有思想开发包容的时代，才能产生优秀的文化作品。随着中国思想环境的逐渐开放，庞大的人民群众的智慧会自然爆发出惊人的作品（现在已有苗头），中国文化软实力才能真正发展。精英政治有一定的道理，但文化主要还是自下而上产生于民间。&lt;/p&gt;
+
+&lt;p&gt;3.&lt;code class=&quot;highlighter-rouge&quot;&gt;Whatever the reason, there seems a clear correlation between intelligence and willingness to consider shocking ideas. This isn't just because smart people actively work to find holes in conventional thinking. I think conventions also have less hold over them to start with. You can see that in the way they dress.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;智力越高的人越愿意去思考惊世骇俗的观点。他们更主动的去发现传统观念的漏洞，而且传统观念对他们的影响也很小，这一点从衣着上就可以看出。有智慧的人在于其有独立思考的能力，敢于挑战常规，不轻易受舆论煽动和大众观念裹挟。&lt;/p&gt;
+
+&lt;p&gt;4.&lt;code class=&quot;highlighter-rouge&quot;&gt;The most important thing is to be able to think what you want, not to say what you want. And if you feel you have to say everything you think, it may inhibit you from thinking improper thoughts。&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;思想应该无所限制，但不能口无遮拦，否则惹祸上身。思想是属于自己的，可以天马行空，但说话涉及社交，社交就涉及妥协。凡事无绝对，掌握界限和度是重要，这就是一个哲学问题了（我似乎明白了为什么国外博士学位都叫Doctor of Philosophy）。&lt;/p&gt;
+
+&lt;p&gt;5.&lt;code class=&quot;highlighter-rouge&quot;&gt;Smile at everyone, and don't tell them what you're thinking. This was wise advice.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;守口如瓶，笑脸相迎。同上，世界很危险，不能乱说话，不能被人轻易看透。&lt;/p&gt;
+
+&lt;p&gt;6.&lt;code class=&quot;highlighter-rouge&quot;&gt;One way to do this is to ratchet the debate up one level of abstraction. If you argue against censorship in general, you can avoid being accused of whatever heresy is contained in the book or film that someone is trying to censor. You can attack labels with meta-labels: labels that refer to the use of labels to prevent discussion. The spread of the term &quot;political correctness&quot; meant the beginning of the end of political correctness, because it enabled one to attack the phenomenon as a whole without being accused of any of the specific heresies it sought to suppress.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;守口如瓶，不意味着什么都不能说，在说一些危险的话时可以用到一些技巧。一种技巧是比如将问题抽象。例如反驳审查制度，不能就具体的书或电影辩论，否则会被认为是支持该书或电影。提取元标签，即抽象的描述，如“政治正确”。总之，要直击问题的本质，不要被带沟里去了。&lt;/p&gt;
+
+&lt;p&gt;7.&lt;code class=&quot;highlighter-rouge&quot;&gt;Another way to counterattack is with metaphor. Arthur Miller undermined the House Un-American Activities Committee by writing a play, &quot;The Crucible,&quot; about the Salem witch trials. He never referred directly to the committee and so gave them no way to reply. What could HUAC do, defend the Salem witch trials? And yet Miller's metaphor stuck so well that to this day the activities of the committee are often described as a &quot;witch-hunt.&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;第二种说一些禁忌的话的方法是使用隐喻。《动物庄园》使用动物反抗来隐喻人类革命，当时读书时对我的震撼要比《1984》这种直接描写要强烈的多。&lt;/p&gt;
+
+&lt;p&gt;8.&lt;code class=&quot;highlighter-rouge&quot;&gt;Best of all, probably, is humor. Zealots, whatever their cause, invariably lack a sense of humor. They can't reply in kind to jokes.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;最好的一种办法，可能是幽默。狂热极端分子最不擅长的就是幽默。使用幽默出击，对方往往无还手之力。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/say.html&quot;&gt;What You Can’t Say 原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">《不能说的话》（What You Can’t Say）是《黑客与画家》书中的一篇文章。本文不讨论该文思想，只记录几个有所启发的句子。</summary></entry><entry><title type="html">决策树算法 ID3, C4.5, CART</title><link href="http://localhost:4000/jekyll/update/2019/09/07/ID3.html" rel="alternate" type="text/html" title="决策树算法 ID3, C4.5, CART" /><published>2019-09-07T18:30:00+08:00</published><updated>2019-09-07T18:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/07/ID3</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/07/ID3.html">&lt;p&gt;决策树通过不断的特征二分决策，给出样本的类别。在这一过程中，有三个核心步骤：1.节点（特征，也称属性）的选择及节点顺序。2.节点如何划分。3.剪枝，剔除多余的分支，形成最终的树。决策树经典算法ID3，C4.5和CART的主要区别在第一个步骤，即特征的选择和使用顺序上用到的算法不同。&lt;/p&gt;
 
 &lt;h2 id=&quot;id3-基于信息增益&quot;&gt;ID3-基于信息增益&lt;/h2&gt;
 &lt;p&gt;ID3（Iterative Dichotomiser 3，迭代二分器三代）由罗斯昆（J.R.Quinlan）1975年在悉尼大学提出了ID3算法。该算法基于香农（Shannon C E.）在信息论中提出的信息熵的概念。&lt;/p&gt;
@@ -382,61 +416,4 @@
 
 &lt;p&gt;本文完。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/nerds.html&quot;&gt;hy Nerds Are Unpopuler 原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。</summary></entry><entry><title type="html">大数据处理二剑客之Hadoop</title><link href="http://localhost:4000/jekyll/update/2019/07/28/Hadoop&Spark.html" rel="alternate" type="text/html" title="大数据处理二剑客之Hadoop" /><published>2019-07-28T15:44:00+08:00</published><updated>2019-07-28T15:44:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/Hadoop&amp;Spark</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/Hadoop&amp;Spark.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
-
-&lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
-
-&lt;p&gt;要了解一项技术，首先思考它是干什么用的？&lt;code class=&quot;highlighter-rouge&quot;&gt;大数据领域的工作包括&quot;数据处理&quot;和&quot;数据分析&quot;&lt;/code&gt;。数据处理似食材准备，数据分析似烹饪过程。准备食材包括买菜、洗菜、切菜、腌制等过程，为下一步烹饪做准备；数据处理包括数据收集、存储、清洗、转换、组合等动作，方便我们进行下一步数据分析。&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop和Spark就是数据处理这一阶段（大数据分析也有涉及，但以处理为主）的关键两项技术，二者有重合，但各司其职.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;这篇文章先梳理Hadoop。首先，&lt;code class=&quot;highlighter-rouge&quot;&gt;一句话描述Hadoop：大数据分析处理领域的分布式系统基础架构&lt;/code&gt;。Hadoop核心思想是分布式，即将任务分到多台计算机上进行处理。&lt;/p&gt;
-
-&lt;h1 id=&quot;起源受启发于google&quot;&gt;起源：受启发于Google&lt;/h1&gt;
-
-&lt;p&gt;Hadoop的诞生比Spark要早。可追溯到2004年，两个程序员Doug Cutting和Mike Cafarella受Google Lab 开发的Map/Reduce和Google File System(GFS)的启发，开始实施最初的版本（称为HDFS和MapReduce），最初Hadoop只与网页索引有关，用于处理海量网页数据进行搜索。随后由Apache基金会支持开发，逐渐发展为一个大数据分析处理领域的分布式系统基础架构。&lt;/p&gt;
-
-&lt;p&gt;该项目的创建者，Doug Cutting解释Hadoop的得名 ：“这个名字是我孩子给一个棕黄色的大象玩具命名的“.&lt;/p&gt;
-
-&lt;p&gt;Hadoop的主要组成部分是HDFS和MamReduce。&lt;/p&gt;
-
-&lt;h1 id=&quot;hdfs分布式文件系统&quot;&gt;HDFS：分布式文件系统&lt;/h1&gt;
-&lt;p&gt;HDFS（Hadoop Distributed File System，Hadoop分布式文件系统，顾名思义是用于存储数据的系统，与传统的分级文件系统（使用目录组织文件）相比，其一样可以增、删、改、查，HDFS的不同之处是分布式存储。&lt;/p&gt;
-
-&lt;p&gt;分布式存储指的是存储在HDFS中的文件被分成块。HDFS有两个关键概念：NameNode和DataNode，NameNode可以控制所有文件的操作，DataNode用于存储文件。分布式文件系统设计的优势在于可支持海量数据de的快速存储和查询等操作。&lt;/p&gt;
-
-&lt;h1 id=&quot;mapreduce分布式计算框架&quot;&gt;MapReduce：分布式计算框架&lt;/h1&gt;
-&lt;p&gt;MapReduce，顾名思义其核心是Map（影射）函数和Reduce（化简、规约）函数。&lt;/p&gt;
-
-&lt;p&gt;Map函数遍历集合里的每个目标对其应用同一个操作。再用烹饪的例子，在准备食材时需要洗菜，把茄子、辣椒、黄瓜……都洗一遍，逐个清洗这一过程就是Map，集合对象是各种食材，同一操作就是清洗。&lt;/p&gt;
-
-&lt;p&gt;Reduce函数遍历集合里的每个目标将其综合称为一个结果。还是烹饪的例子，菜洗好后，开始做大杂烩，锅里加入茄子、加入辣椒、加入黄瓜……最终得到一盆大杂烩。加入各种食材这一过程就是Reduce，将多种食材归约为最重的一个结果———大杂烩菜。&lt;/p&gt;
-
-&lt;p&gt;MapReduce这两个核心函数并不新鲜，其内容不仅是这二个函数（其他如Group，Sort等），而是一种编程模型，是一种方法，抽象理论。MapReduce借鉴了语言Lisp的函数式编程设计（什么是函数式编程，新文再议），体现了大数据处理过程中分而治之的思想。分布式是分而治之思想的实践，MapReduce专为分布式计算设计。&lt;/p&gt;
-
-&lt;p&gt;除了HDFS和MapReduce，Hadoop还包括以下模块：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Hadoop Common：支持其他Hadoop模块的通用工具。&lt;/li&gt;
-  &lt;li&gt;Hadoop YARN：一种作业调度和集群资源管理的框架。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Apache中其他Hadoop相关的项目包括：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ambari：一种用于提供、管理和监督Apache Hadoop集群的基于Web UI的且易于使用的Hadoop管理工具。&lt;/li&gt;
-  &lt;li&gt;Avro：一种数据序列化系统。&lt;/li&gt;
-  &lt;li&gt;Cassandra：一种无单点故障的可扩展的分布式数据库。&lt;/li&gt;
-  &lt;li&gt;Chukwa：一种用于管理大型分布式系统的数据收集系统。&lt;/li&gt;
-  &lt;li&gt;HBase：一种支持存储大型表的结构化存储的可扩展的分布式数据库。&lt;/li&gt;
-  &lt;li&gt;Hive：一种提供数据汇总和特定查询的数据仓库。&lt;/li&gt;
-  &lt;li&gt;Mahout：一种可扩展的机器学习和数据挖掘库（Scala语言实现，可结合Spark后端）。&lt;/li&gt;
-  &lt;li&gt;Pig：一种高级的数据流语言且支持并行计算的执行框架（2017年发布的最新版本0.17.0是添加了Spark上的Pig应* 用）。&lt;/li&gt;
-  &lt;li&gt;Spark：一种用于Hadoop数据的快速通用计算引擎。Spark提供一种支持广泛应用的简单而易懂的编程模型，包括* ETL（ Extract-Transform-Load）、机器学习、流处理以及图计算。&lt;/li&gt;
-  &lt;li&gt;Tez：一种建立在Hadoop YARN上数据流编程框架，它提供了一个强大而灵活的引擎来任意构建DAG* （Directed-acyclic-graph）任务去处理用于批处理和交互用例的数据。&lt;/li&gt;
-  &lt;li&gt;ZooKeeper：一种给分布式应用提供高性能的协同服务系统。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;那么问题，既然Hadoop生态家族这么庞大，我们为什么要选择Spark作为对于大数据进行数据分析和数据挖掘的基本计算框架？欲知后事如何，请听下回分解。&lt;/p&gt;
-
-&lt;p&gt;[参考资料]：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.51cto.com/xpleaf/2080181&quot;&gt;https://blog.51cto.com/xpleaf/2080181&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/Hadoop/3526507&quot;&gt;https://baike.baidu.com/item/Hadoop/3526507&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/nerds.html&quot;&gt;hy Nerds Are Unpopuler 原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。</summary></entry></feed>
