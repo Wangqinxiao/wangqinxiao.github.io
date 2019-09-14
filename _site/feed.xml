@@ -1,5 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-08T18:20:07+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">《不能说的话》</title><link href="http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say.html" rel="alternate" type="text/html" title="《不能说的话》" /><published>2019-09-08T17:30:00+08:00</published><updated>2019-09-08T17:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say.html">&lt;p&gt;《不能说的话》（What You Can’t Say）是《黑客与画家》书中的一篇文章。本文不讨论该文思想，只记录几个有所启发的句子。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-14T10:47:54+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">K-means</title><link href="http://localhost:4000/jekyll/update/2019/09/13/kmeans.html" rel="alternate" type="text/html" title="K-means" /><published>2019-09-13T18:30:00+08:00</published><updated>2019-09-13T18:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/13/kmeans</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/13/kmeans.html">&lt;p&gt;K-means（K-均值）算法是十大数据挖掘算法之一，用于聚类。它可以通过无监督的方式将样本数据中相似的数据聚在一起。&lt;/p&gt;
+
+&lt;h2 id=&quot;历史&quot;&gt;历史&lt;/h2&gt;
+&lt;p&gt;K-means历史悠久，最早可追溯到Lloyd在1956年的研究。&lt;/p&gt;
+
+&lt;h2 id=&quot;算法原理&quot;&gt;算法原理&lt;/h2&gt;
+&lt;p&gt;K-means算法步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;首先随机选取K个点作为聚类的初始中心点。&lt;/li&gt;
+  &lt;li&gt;计算每个数据点到各个中心点的距离，找到距离自己最近的中心点，聚到该簇。&lt;/li&gt;
+  &lt;li&gt;更新各个聚类数据集合的中心点，算法是计算该簇各个点坐标的的均值，。&lt;/li&gt;
+  &lt;li&gt;重复步骤2、3的步骤，直到算法收敛。算法收敛的标准一般是K个聚类中每个数据点到中心点的距离总和最小，或中心点不再发生变化。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;聚类的目标，即收敛需要一个目标函数，K-means使用误差的平方和（Sum of the Squared Error，SSE）作为度量聚类质量的目标函数。计算每个数据点的误差，即数据点到中心点的欧几里德距离（直线距离），然后计算误差的平方和。对比两次聚类结果，SSE越小越好。&lt;/p&gt;
+
+&lt;h2 id=&quot;k-means缺点&quot;&gt;K-means缺点&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;不能处理非球形簇、不同密度簇、尺寸不同的簇。&lt;/li&gt;
+  &lt;li&gt;聚类的个数和初始中心点需要人为指定，K值有时很难估计，初始的中心点不同有时结果差异很大。&lt;/li&gt;
+  &lt;li&gt;只限于有中心概念的数据。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;变种算法&quot;&gt;变种算法&lt;/h2&gt;
+&lt;p&gt;K－means有一些变种算法，例如K-means++，二分K-means，能在一定程度上减少初始中心的影响。K-means在初始中心点尽量让各个中心点距离较远，二分K-means会先通过K-means算法分为两簇，然后再对各簇分别进行聚类。&lt;/p&gt;
+
+&lt;p&gt;———本文结束&lt;/p&gt;
+
+&lt;p&gt;［参考文档］&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/58907c0e0024&quot;&gt;https://www.jianshu.com/p/58907c0e0024&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;《数据挖掘导论》&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">K-means（K-均值）算法是十大数据挖掘算法之一，用于聚类。它可以通过无监督的方式将样本数据中相似的数据聚在一起。</summary></entry><entry><title type="html">《不能说的话》</title><link href="http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say.html" rel="alternate" type="text/html" title="《不能说的话》" /><published>2019-09-08T17:30:00+08:00</published><updated>2019-09-08T17:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/08/what-you-can't-say.html">&lt;p&gt;《不能说的话》（What You Can’t Say）是《黑客与画家》书中的一篇文章。本文不讨论该文思想，只记录几个有所启发的句子。&lt;/p&gt;
 
 &lt;p&gt;1.&lt;code class=&quot;highlighter-rouge&quot;&gt;The statements that make people mad are the ones they worry might be believed. I suspect the statements that make people maddest are those they worry might be true.&lt;/code&gt;&lt;/p&gt;
 
@@ -386,34 +419,4 @@
   &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/xia520pi/p/8609938.html&quot;&gt;https://www.cnblogs.com/xia520pi/p/8609938.html&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/SPARK/2229312?fr=aladdin&quot;&gt;https://baike.baidu.com/item/SPARK/2229312?fr=aladdin&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/liuxiangke0210/article/details/79687240&quot;&gt;https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry><entry><title type="html">《为什么书呆子不受欢迎》句抄</title><link href="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html" rel="alternate" type="text/html" title="《为什么书呆子不受欢迎》句抄" /><published>2019-07-28T19:54:00+08:00</published><updated>2019-07-28T19:54:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/07/28/why_nerds_are_unpopular_notes.html">&lt;p&gt;最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。&lt;/p&gt;
-
-&lt;p&gt;断断续续，每周末抽出时间来读，只读了三分之一，没有记笔记，也不求甚解。回想这种读书方法是不正确的，这本书虽不是传世经典，需熟读百遍才能其义自见，但只囫囵吞枣的读一遍还是不够的。起码有个读书笔记，加上自己的思考，想想如何学以致用，再不济也要抄几个会心的句子。&lt;/p&gt;
-
-&lt;p&gt;此前读的几篇，自然是没有笔记，但遇到不错的句子还是随手划了记号。今日先总结一篇，权当好好读书的开始。&lt;/p&gt;
-
-&lt;h3 id=&quot;why-nerds-are-unpopuler-为什么书呆子不受欢迎&quot;&gt;Why Nerds Are Unpopuler 为什么书呆子不受欢迎&lt;/h3&gt;
-
-&lt;p&gt;本文讲述为什么Nerds（搞技术的书呆子）不受欢迎？从Nerds本身、人类社会学、家长、学校等方面都做了分析，最后把教育制度狠狠的批判了一番。&lt;/p&gt;
-
-&lt;p&gt;1.&lt;code class=&quot;highlighter-rouge&quot;&gt;Another reason kids persecute nerds is to make themselves feel better. When you tread water, you lift yourself up by pushing water down. Likewise, in any social hierarchy, people unsure of their own position will try to emphasize it by maltreating those they think rank below. I've read that this is why poor whites in the United States are the group most hostile to blacks.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;其他孩子欺负Nerds的一个原因是通过打压别人，抬高自己，从而从心理上获得平衡。在人类社会中，往往对自己的地位不够自信的人才会欺凌比自己阶层低的人，底层人民狗咬狗，大狗咬小狗。比如，在美国最敌视黑人的是穷的白人。对于个人而言，避免自己称为被欺凌的对象，或者靠欺凌获得心理安慰的“穷白人”，只能是往更高的阶层爬升。&lt;/p&gt;
-
-&lt;p&gt;2.&lt;code class=&quot;highlighter-rouge&quot;&gt;Like a politician who wants to distract voters from bad times at home, you can create an enemy if there isn't a real one. By singling out and persecuting a nerd, a group of kids from higher in the hierarchy create bonds between themselves. Attacking an outsider makes them all insiders. This is why the worst cases of bullying happen with groups.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;小孩子们欺负Nerds的另一个原因是为了合群。形成一个团体最有效的办法是找到一个共同的敌人，对外同仇敌忾，内部才显得团结。政客往往会用这一招来获得国内民众的支持，最近的特朗普在2020大选之前打压华为，少不了这方面的考虑。这招够损，但实用。&lt;/p&gt;
-
-&lt;p&gt;3.&lt;code class=&quot;highlighter-rouge&quot;&gt;Bullying was only part of the problem. Another problem, and possibly an even worse one, was that we never had anything real to work on. Humans like to work; in most of the world, your work is your identity. And all the work we did was pointless, or seemed so at the time.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;校园霸凌还有一个原因，就是闲的没事干，吃饱了撑着找找茬。作者对现在教育制度大家批判，认为都是家长和学校太懒，学生在学校做的事情没有意义。作者观点似乎太偏激，只提出了问题，没给出有效的解决方案，这里不多加讨论。我记下这句话的原因是因为他提到：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;人其实都是喜欢工作的，在大多数情况下，工作就是个人的身份。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;如果我们讨厌工作，觉得工作很苦很累，往往不是因为工作强度大、时间长，而是因为觉得工作没有意义，没有收获感。对于成年人来说，工作是生活的主题，并影响甚至决定家庭、感情等其他各个方面。因此，对的职业规划显得更加重要。&lt;/p&gt;
-
-&lt;p&gt;本文完。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/nerds.html&quot;&gt;hy Nerds Are Unpopuler 原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">最近在看硅谷创业教父Paul Graham（保罗·格雷厄姆）的Hackers and Painters（黑客与画家），一本收录其博客的文集，讲述其对计算机文化的思考。</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry></feed>
