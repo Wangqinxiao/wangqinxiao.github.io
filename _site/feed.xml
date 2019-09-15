@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-14T10:47:54+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">K-means</title><link href="http://localhost:4000/jekyll/update/2019/09/13/kmeans.html" rel="alternate" type="text/html" title="K-means" /><published>2019-09-13T18:30:00+08:00</published><updated>2019-09-13T18:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/13/kmeans</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/13/kmeans.html">&lt;p&gt;K-means（K-均值）算法是十大数据挖掘算法之一，用于聚类。它可以通过无监督的方式将样本数据中相似的数据聚在一起。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-15T16:55:59+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">《“黑客”一词》</title><link href="http://localhost:4000/jekyll/update/2019/09/15/attitude.html" rel="alternate" type="text/html" title="《“黑客”一词》" /><published>2019-09-15T16:20:00+08:00</published><updated>2019-09-15T16:20:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/15/attitude</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/15/attitude.html">&lt;p&gt;《“黑客”一词》（The Word “Hacker”）是《黑客与画家》书中的一篇文章，讲述黑客文化。本文不讨论该文思想，只记录几个有所启发的句子。&lt;/p&gt;
+
+&lt;p&gt;1.&lt;code class=&quot;highlighter-rouge&quot;&gt;Show any hacker a lock and his first thought is how to pick it.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;黑客看到一个锁的第一个反应是撬开它。黑客或极客都喜欢挑战各种规则，崇尚自由，讨厌条条框框的限制。互联网的繁荣与黑客精神密不可分。&lt;/p&gt;
+
+&lt;p&gt;2.&lt;code class=&quot;highlighter-rouge&quot;&gt;Hackers are unruly. That is the essence of hacking. And it is also the essence of Americanness. It is no accident that Silicon Valley is in America, and not France, or Germany, or England, or Japan. In those countries, people color inside the lines.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;黑客都是不服从管教的，这事黑客的本性。这也是美国人的本性。所以硅谷出现在了美国，而不是欧洲、日本，因为那里的人都在按部就班的生活。不服从管教的文化不一定就能诞生黑客精神，但这种文化是黑客的必要条件。另一个主要因素应该是经济基础。而美国恰恰都具备了，因此吸引了全球的黑客人才。&lt;/p&gt;
+
+&lt;p&gt;3.&lt;code class=&quot;highlighter-rouge&quot;&gt;It's odd that people think of programming as precise and methodical. Computers are precise and methodical. Hacking is something you do with a gleeful laugh.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;人们往往认为编程是精确、模式化的。计算机的确是精确、模式化的。但是黑客的工作，并非按部就班，更多的是会心一笑。精确的计算机世界其核心是自由和创新。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/gba.html&quot;&gt;原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">《“黑客”一词》（The Word “Hacker”）是《黑客与画家》书中的一篇文章，讲述黑客文化。本文不讨论该文思想，只记录几个有所启发的句子。</summary></entry><entry><title type="html">K-means</title><link href="http://localhost:4000/jekyll/update/2019/09/13/kmeans.html" rel="alternate" type="text/html" title="K-means" /><published>2019-09-13T18:30:00+08:00</published><updated>2019-09-13T18:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/13/kmeans</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/13/kmeans.html">&lt;p&gt;K-means（K-均值）算法是十大数据挖掘算法之一，用于聚类。它可以通过无监督的方式将样本数据中相似的数据聚在一起。&lt;/p&gt;
 
 &lt;h2 id=&quot;历史&quot;&gt;历史&lt;/h2&gt;
 &lt;p&gt;K-means历史悠久，最早可追溯到Lloyd在1956年的研究。&lt;/p&gt;
@@ -360,63 +374,4 @@
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/liuxiangke0210/article/details/79687240&quot;&gt;https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">笔者在一线碰到过很多次Spark程序崩溃的问题，而且解决起来比较费劲。纠其根本原因在于开发人员在编写Spark程序时只注重功能实现，不了解Spark程序运行过程，程序性能不佳，导致现场运行问题频发。而解决问题的过程中，由于不了解运行过程，只能靠各种尝试，解决问题效率极低。</summary></entry><entry><title type="html">大数据处理二剑客之Spark</title><link href="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&Spark1.html" rel="alternate" type="text/html" title="大数据处理二剑客之Spark" /><published>2019-08-04T17:25:00+08:00</published><updated>2019-08-04T17:25:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/04/Hadoop&amp;Spark1.html">&lt;p&gt;进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。&lt;/p&gt;
-
-&lt;p&gt;虽然一直在用它们，但对其没有系统的认识，甚至把二者混为一谈。现在梳理一下。&lt;/p&gt;
-
-&lt;p&gt;要了解一项技术，首先思考它是干什么用的？&lt;code class=&quot;highlighter-rouge&quot;&gt;大数据领域的工作包括&quot;数据处理&quot;和&quot;数据分析&quot;&lt;/code&gt;。数据处理似食材准备，数据分析似烹饪过程。准备食材包括买菜、洗菜、切菜、腌制等过程，为下一步烹饪做准备；数据处理包括数据收集、存储、清洗、转换、组合等动作，方便我们进行下一步数据分析。&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop和Spark就是数据处理这一阶段（大数据分析也有涉及，但以处理为主）的关键两项技术，二者有重合，但各司其职.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;这篇文章梳理Spark。首先，&lt;code class=&quot;highlighter-rouge&quot;&gt;一句话描述Spark：最受欢迎的大数据计算框架&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;Spark是加州大学伯克利分校的AMP实验室开发的类似Hadoop MapReduce的通用并行框架，诞生于2009年，2013年成为了Aparch基金项目。Spark是MapReduce的替代方案，而且兼容HDFS、Hive，可融入Hadoop的生态系统，以弥补MapReduce的不足。&lt;/p&gt;
-
-&lt;h1 id=&quot;spark-vs-hadoop&quot;&gt;Spark VS Hadoop&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://wangqinxiao.github.io/jekyll/update/2019/07/28/Hadoop&amp;amp;Spark.html&quot;&gt;大数据处理二剑客之Hadoop&lt;/a&gt;一文梳理了Hadoop生态系统，Hadoop已有MapReduce计算框架，为什么又要用Spark作为大数据计算框架呢？&lt;/p&gt;
-
-&lt;p&gt;答案是：因为&lt;code class=&quot;highlighter-rouge&quot;&gt;Spark比Hadoop MapReduce更快&lt;/code&gt;。Spark比MapReduce更快的原因是，Hadoop MapReduce直接读写存储设备硬盘（HDFS），而&lt;code class=&quot;highlighter-rouge&quot;&gt;Spark基于内存进行计算&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;Spark和Hadoop MaoReduce计算框架一样，是分布式架构。其特点是在数据计算的过程中，把中间结果缓存在内存中。在进行大量数据计算时，直接从内存中读取数据，这要比从硬盘中读取快很多，速度优势明显。&lt;/p&gt;
-
-&lt;p&gt;但是，基于内存的计算同样也会带来缺点。&lt;code class=&quot;highlighter-rouge&quot;&gt;与Hadoop MapReduce相比，Spark的缺点是不稳定&lt;/code&gt;。内存毕竟有限，成本也高，如果数据量过大的话，容易造成内存溢出的问题，从而导致计算过程崩溃。Hadoop MapReduce写的程序虽然慢，但是总会算出结果。而Spark写的程序常常由于数据量过大、内存不够或者计算资源配置不合理，导致崩溃（如Lost stages等等）。笔者在一线使用Spark进行数据处理，程序崩溃是最头疼的事情。&lt;/p&gt;
-
-&lt;p&gt;鉴于Spark基于内存计算而导致的速度快的优点和不稳定的缺点。在大数据项目的计算框架技术选型时，需要&lt;code class=&quot;highlighter-rouge&quot;&gt;综合考虑数据量、业务的时间要求、可用计算资源&lt;/code&gt;。一般在&lt;code class=&quot;highlighter-rouge&quot;&gt;数据处理阶段（原始数据量一般较大）的过程中用Hadoop MapReduce&lt;/code&gt;，在&lt;code class=&quot;highlighter-rouge&quot;&gt;数据分析（数据已经过清洗，数据量一般较小）的过程中使用Spark&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;Spark已经融入Hadoop系统，可支持Hadoop Yarn资源管理，HDFS进行数据存储。&lt;/p&gt;
-
-&lt;h1 id=&quot;spark组成部分&quot;&gt;Spark组成部分&lt;/h1&gt;
-
-&lt;p&gt;Spark的主要组件有：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SparkCore：Spark核心计算组件，实现分布式计算。它是我们最常用到的组件。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;＊ SparkSQL：Spark Sql 是Spark来操作结构化数据的程序包，可以让我使用Hive SQL语句的方式来查询和处理数据。&lt;/p&gt;
-
-&lt;p&gt;SparkStreaming： 是Spark提供的对实时数据进行流式计算的组件。&lt;/p&gt;
-
-&lt;p&gt;MLlib：提供常用机器学习算法的实现库。&lt;/p&gt;
-
-&lt;p&gt;GraphX：提供一个分布式图计算框架，能高效进行图计算。&lt;/p&gt;
-
-&lt;h1 id=&quot;spark相关概念&quot;&gt;Spark相关概念&lt;/h1&gt;
-
-&lt;p&gt;这部分梳理我们最常用到的Spark Core的运行原理。Spark程序在运行过程中，涉及到的概念包括Application、Driver、Executer、Job、Stage、RDD等。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Application：编写的Spark应用程序就是一个Application。&lt;/li&gt;
-  &lt;li&gt;Driver：Driver运行Application的Main()函数并创建SparkContext，即应用程序的运行环境。SparkContext负责分布式Cluster间的通信、任务分配管理等。通常SparkContext即代表Driver。当Executor部分运行完毕后，Driver负责将SparkContext关闭&lt;/li&gt;
-  &lt;li&gt;Excuter：执行器。一个Excuter代表一个进程，负责计算任务，并将结果存在内存或者磁盘上。Excuter越多，说明进程越多，执行速度也就更快。&lt;/li&gt;
-  &lt;li&gt;Job：Job是一个计算作业，由一个或着多个任务集组成。一次Spark Action，例如ReduceByKey就会催生一次计算作业，行成一个Job。一个Job包含多个RDD及作用于相应RDD上的各种Operation。&lt;/li&gt;
-  &lt;li&gt;Stage：Stage是一个任务集对应的调度阶段。每个Job会被拆分很多组Task，每组任务被称为Stage（或者TaskSet）。&lt;/li&gt;
-  &lt;li&gt;Task：任务被送到某个Executor上的工作任务;单个分区数据集上的最小处理流程单元.&lt;/li&gt;
-  &lt;li&gt;RDD：弹性分布式数据集（Resilient Distributed Datasets，RDD），Spark的一种数据对象，是Spark的基本计算单元。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;[参考资料]：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/xia520pi/p/8609938.html&quot;&gt;https://www.cnblogs.com/xia520pi/p/8609938.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/SPARK/2229312?fr=aladdin&quot;&gt;https://baike.baidu.com/item/SPARK/2229312?fr=aladdin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/liuxiangke0210/article/details/79687240&quot;&gt;https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">进入大数据领域，Hadoop和Spark是最先要了解的两个技术，至少目前看来是这样的。</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">笔者在一线碰到过很多次Spark程序崩溃的问题，而且解决起来比较费劲。纠其根本原因在于开发人员在编写Spark程序时只注重功能实现，不了解Spark程序运行过程，程序性能不佳，导致现场运行问题频发。而解决问题的过程中，由于不了解运行过程，只能靠各种尝试，解决问题效率极低。</summary></entry></feed>

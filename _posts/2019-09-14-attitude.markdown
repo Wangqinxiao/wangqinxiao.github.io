@@ -1,0 +1,25 @@
+---
+layout: post
+title: 《“黑客”一词》
+sub-title: 
+date: 2019-09-15 16:20 +0800
+categories: jekyll update
+---
+
+《“黑客”一词》（The Word “Hacker”）是《黑客与画家》书中的一篇文章，讲述黑客文化。本文不讨论该文思想，只记录几个有所启发的句子。
+
+
+1.`Show any hacker a lock and his first thought is how to pick it.`
+
+黑客看到一个锁的第一个反应是撬开它。黑客或极客都喜欢挑战各种规则，崇尚自由，讨厌条条框框的限制。互联网的繁荣与黑客精神密不可分。
+
+2.`Hackers are unruly. That is the essence of hacking. And it is also the essence of Americanness. It is no accident that Silicon Valley is in America, and not France, or Germany, or England, or Japan. In those countries, people color inside the lines.`
+
+黑客都是不服从管教的，这事黑客的本性。这也是美国人的本性。所以硅谷出现在了美国，而不是欧洲、日本，因为那里的人都在按部就班的生活。不服从管教的文化不一定就能诞生黑客精神，但这种文化是黑客的必要条件。另一个主要因素应该是经济基础。而美国恰恰都具备了，因此吸引了全球的黑客人才。
+
+3.`It's odd that people think of programming as precise and methodical. Computers are precise and methodical. Hacking is something you do with a gleeful laugh.`
+
+人们往往认为编程是精确、模式化的。计算机的确是精确、模式化的。但是黑客的工作，并非按部就班，更多的是会心一笑。精确的计算机世界其核心是自由和创新。
+
+
+[原文地址](http://www.paulgraham.com/gba.html)
