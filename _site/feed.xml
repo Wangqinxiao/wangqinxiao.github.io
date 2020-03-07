@@ -1,5 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-15T16:55:59+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
-</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">《“黑客”一词》</title><link href="http://localhost:4000/jekyll/update/2019/09/15/attitude.html" rel="alternate" type="text/html" title="《“黑客”一词》" /><published>2019-09-15T16:20:00+08:00</published><updated>2019-09-15T16:20:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/15/attitude</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/15/attitude.html">&lt;p&gt;《“黑客”一词》（The Word “Hacker”）是《黑客与画家》书中的一篇文章，讲述黑客文化。本文不讨论该文思想，只记录几个有所启发的句子。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-07T16:46:43+08:00</updated><id>http://localhost:4000//</id><title type="html">Hi, I’m Wang qinxiao</title><subtitle>读有趣的书，做有趣的事。
+</subtitle><author><name>by 王勤晓</name></author><entry><title type="html">朴素贝叶斯算法</title><link href="http://localhost:4000/jekyll/update/2020/03/05/NAIVE-BAYES.html" rel="alternate" type="text/html" title="朴素贝叶斯算法" /><published>2020-03-05T16:46:00+08:00</published><updated>2020-03-05T16:46:00+08:00</updated><id>http://localhost:4000/jekyll/update/2020/03/05/NAIVE-BAYES</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/03/05/NAIVE-BAYES.html">&lt;p&gt;朴素贝叶斯是一种分类算法，常用于垃圾邮件识别和文本分类。如果想要一个易于理解、快速的分类器，那么朴素贝叶斯会是首选。&lt;/p&gt;
+
+&lt;p&gt;朴素贝叶斯基于贝叶斯提出的贝叶斯定理，并且假设样本特征彼此独立，没有相关关系，而这个假设在现实世界中是很不真实的，这很“朴素（NAIVE）”，朴素贝叶斯因此得名。&lt;/p&gt;
+
+&lt;h2 id=&quot;贝叶斯分类应用示例&quot;&gt;贝叶斯分类应用示例&lt;/h2&gt;
+&lt;p&gt;本例来自阮一峰的&lt;a href=&quot;http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html&quot;&gt;《朴素贝叶斯分类器的应用》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;某个医院早上收了六个门诊病人，统计数据如下表：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;症状&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;职业&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;疾病&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;打喷嚏&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;护士　&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;　感冒&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;打喷嚏&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;农夫　　&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;　过敏&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;头痛&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;建筑工人　&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;脑震荡&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;头痛&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;建筑工人　&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;感冒&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;打喷嚏&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;教师　&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;　感冒&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;头痛&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;教师　&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;脑震荡&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;现在又来了第七个病人，是一个打喷嚏的建筑工人。计算他患上感冒的概率有多大。&lt;/p&gt;
+
+&lt;p&gt;根据贝叶斯定理：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;P(A|B) = P(B|A)P(A) / P(B)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;可得：&lt;code class=&quot;highlighter-rouge&quot;&gt;P(感冒|打喷嚏x建筑工人) = P(打喷嚏x建筑工人|感冒) x P(感冒) / P(打喷嚏x建筑工人)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;假定”打喷嚏”和”建筑工人”这两个特征是独立的，则：&lt;code class=&quot;highlighter-rouge&quot;&gt;P(感冒|打喷嚏x建筑工人) = P(打喷嚏|感冒) x P(建筑工人|感冒) x P(感冒) / P(打喷嚏) x P(建筑工人) = 0.66 x 0.33 x 0.5 / 0.5 x 0.33 = 0.66&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;因此，这个打喷嚏的建筑工人，有66%的概率是得了感冒。同理，可以计算这个病人患上过敏或脑震荡的概率。比较这几个概率，就可以知道他最可能得什么病。&lt;/p&gt;
+
+&lt;p&gt;这就是贝叶斯分类器的基本方法：在统计资料的基础上，依据某些特征，计算各个类别的概率，从而实现分类。&lt;/p&gt;
+
+&lt;h2 id=&quot;算法原理&quot;&gt;算法原理&lt;/h2&gt;
+&lt;p&gt;根据概率知识，已知：
+&lt;img src=&quot;http://localhost:4000/assets/images/PAB.png&quot; alt=&quot;PAB&quot; /&gt;，
+&lt;img src=&quot;http://localhost:4000/assets/images/PBA.png&quot; alt=&quot;PBA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;合并公式，则==&amp;gt;
+&lt;img src=&quot;http://localhost:4000/assets/images/PABfinal.png&quot; alt=&quot;BAYES&quot; /&gt;，即贝叶斯定理。&lt;/p&gt;
+
+&lt;p&gt;贝叶斯定理中，A是标签，B是属性集合。假定B属性集合中的属性（B1,B2,B3…Bi）彼此独立，则，&lt;code class=&quot;highlighter-rouge&quot;&gt;P(A|B) = P(B1|A) x P(B2|A) x P(B3|A)...x P(Bi|A) x P(A) / P(B1) x P(B2) x P(B3)...x P(Bi)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;在分类的过程中，由于P(B1) x P(B2) x P(B3)…x P(Bi)的值在求各类的概率时都是一样，所以在计算时可去掉此常数，简化为：&lt;code class=&quot;highlighter-rouge&quot;&gt;P(A|B) = P(B1|A) x P(B2|A) x P(B3|A)...x P(Bi|A) x P(A)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;以上公式中各项都可以从训练样本中统计而得。&lt;/p&gt;
+
+&lt;h2 id=&quot;算法优缺点&quot;&gt;算法优缺点&lt;/h2&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;计算简单，快速。统计各类别的概率，计算并不复杂。&lt;/li&gt;
+  &lt;li&gt;易理解。计算各个类别的概率，从而实现分类，概率这一概念也容易被人理解。&lt;/li&gt;
+  &lt;li&gt;对离散类型的属性效果很好，比如文本分类。&lt;/li&gt;
+  &lt;li&gt;具有高维数据的良好性能（特征数量很大）。&lt;/li&gt;
+  &lt;li&gt;可以有效地进行多类预测。&lt;/li&gt;
+  &lt;li&gt;对无关特征不敏感。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;不太适合处理连续型的属性。需要将连续型数据离散化，效果不一。&lt;/li&gt;
+  &lt;li&gt;特征的独立性不成立。现实生活中，各属性完全独立的情况很少。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;———本文结束&lt;/p&gt;
+
+&lt;p&gt;［参考文档］&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html&quot;&gt;阮一峰的《朴素贝叶斯分类器的应用》&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">朴素贝叶斯是一种分类算法，常用于垃圾邮件识别和文本分类。如果想要一个易于理解、快速的分类器，那么朴素贝叶斯会是首选。</summary></entry><entry><title type="html">《“黑客”一词》</title><link href="http://localhost:4000/jekyll/update/2019/09/15/attitude.html" rel="alternate" type="text/html" title="《“黑客”一词》" /><published>2019-09-15T16:20:00+08:00</published><updated>2019-09-15T16:20:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/15/attitude</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/15/attitude.html">&lt;p&gt;《“黑客”一词》（The Word “Hacker”）是《黑客与画家》书中的一篇文章，讲述黑客文化。本文不讨论该文思想，只记录几个有所启发的句子。&lt;/p&gt;
 
 &lt;p&gt;1.&lt;code class=&quot;highlighter-rouge&quot;&gt;Show any hacker a lock and his first thought is how to pick it.&lt;/code&gt;&lt;/p&gt;
 
@@ -309,69 +411,4 @@
 
 &lt;p&gt;程序是写给人看的，顺便让机器执行。作者认为开发者不仅要对用户有同理心，对程序的读者也要有同理心，这对开发者自己也有利，因为开发者自己也是读者的一份子。开发者如果便写的程序可读性差，可能自己几个月回来也看不懂了，更别说让其他人维护。正如乔布斯对待iPhone，不仅外表设计要完美，内部零件结构也要精益求精，正是这种态度才能造就经得起时间考验的艺术品。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/hp.html&quot;&gt;黑客与画家 原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">本周没有新的阅读。接上篇继续整理下Hackers and Painters（黑客与画家）一书的句子。</summary></entry><entry><title type="html">Spark程序运行过程</title><link href="http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting.html" rel="alternate" type="text/html" title="Spark程序运行过程" /><published>2019-08-10T16:30:00+08:00</published><updated>2019-08-10T16:30:00+08:00</updated><id>http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/08/10/SparkExecuting.html">&lt;p&gt;笔者在一线碰到过很多次Spark程序崩溃的问题，而且解决起来比较费劲。纠其根本原因在于开发人员在编写Spark程序时只注重功能实现，不了解Spark程序运行过程，程序性能不佳，导致现场运行问题频发。而解决问题的过程中，由于不了解运行过程，只能靠各种尝试，解决问题效率极低。&lt;/p&gt;
-
-&lt;p&gt;总之，不了解Spark运行原理，就没法写出可靠的Spark程序。&lt;/p&gt;
-
-&lt;p&gt;现在就用一段Spark代码实例来一步一步解析Spark运行过程。&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Spark program&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputPath1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputPath2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputPath3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtinone1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lines3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtinone&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtinone1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dtinone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAsTextFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dtinone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;···&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;程序运行过程如下：&lt;/p&gt;
-
-&lt;h1 id=&quot;1-资源配置&quot;&gt;1. 资源配置&lt;/h1&gt;
-&lt;p&gt;资源分配不由Spark程序决定，而是由资源管理管理器决定，如Hadoop Yarn。大数据计算需要大量硬件计算资源，资源分配决定着程序的运行性能。运行Spark程序前需要保证已配置足够可用的计算资源。资源配置参数包括，资源队列、Driver内存、Executor内存、Executor核数等等。&lt;/p&gt;
-
-&lt;p&gt;资源配置是Spark程序运行前的准备工作，本文暂且不做深入探讨。&lt;/p&gt;
-
-&lt;h1 id=&quot;2-创建sparkcontext&quot;&gt;2. 创建SparkContext&lt;/h1&gt;
-&lt;p&gt;运行Spark程序后，第一步Driver进程启动并创建SparkContext，即该Spark程序的专属运行环境。SparkContext负责资源的申请，任务的分配和管理。相当于Spark程序运行过程中的管理者。以下步骤，除了计算，其他几乎都有SparkContext来负责。&lt;/p&gt;
-
-&lt;p&gt;当程序运行完成后，Driver会关闭SparkContext。&lt;/p&gt;
-
-&lt;h1 id=&quot;3-启动executor&quot;&gt;3. 启动Executor&lt;/h1&gt;
-&lt;p&gt;SparkContext再创建完成后，会向资源管理器申请Executor资源，并启动Executor。&lt;/p&gt;
-
-&lt;h1 id=&quot;4-创建dag图&quot;&gt;4. 创建DAG图&lt;/h1&gt;
-&lt;p&gt;环境和资源一切就绪之后。SparkContext会根据Spark程序创建DAG（Directed Acycle graph，有向无环图），即反应所有RDD之间依赖关系的图。&lt;/p&gt;
-
-&lt;p&gt;本文示例的程序DAG图大致如下：（本图比较简易，默认RDD没有分区。基本元素单位应该是是RDD的分区）&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/DAG.jpg&quot; alt=&quot;DAG&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;3-触发job&quot;&gt;3. 触发Job&lt;/h1&gt;
-&lt;p&gt;根据DAG图，一次RDD的Action触发一次Job（计算作业）。例如，示例代码中的saveAsTextFile就会触发一次Job。该Job包括对应RDD上的各种操作。&lt;/p&gt;
-
-&lt;h1 id=&quot;4-分配stagetaskset&quot;&gt;4. 分配Stage（TaskSet）&lt;/h1&gt;
-&lt;p&gt;Job可进一步分为Stage。分配原则为根据DAG图，Job流程从后向前，遇到宽依赖，则将当前的流程分为一个Stage。各个Stage一般并非只有线性关系，还有嵌套、并行关系。&lt;/p&gt;
-
-&lt;p&gt;本文代码例子的Stag划分如图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/JOB.jpg&quot; alt=&quot;JOB&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一个Stage对应一个TaskSet，即包含多个Task的集合。每个Task对于一个RDD（分区）的操作。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/TASK.jpg&quot; alt=&quot;TASK&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;6-提交stagetaskset&quot;&gt;6. 提交Stage（TaskSet）&lt;/h1&gt;
-&lt;p&gt;提交Stage，也就是提交TaskSet。DAGScheduler通过TaskScheduler接口提交TaskSet给各个Executor，并以多线程的形式执行。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/TASK-SET.jpg&quot; alt=&quot;TASK-SET&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;7-执行task&quot;&gt;7. 执行Task&lt;/h1&gt;
-&lt;p&gt;TaskScheduler构建一个TaskSetManager的实例来管理一个TaskSet的生命周期，跟踪每一个task，如果task失败，负责重试task直到达到task重试次数的最多次数。&lt;/p&gt;
-
-&lt;p&gt;一个TaskSet在Executor中执行结束后，其结果会返回给DAGScheduler。如果得到TaskSet执行失败的信息，则会重新动态分配该Task到其他节点执行，直到重试次数的最多次数（根据笔者经验，应该是默认4次，如果继续失败，则程序崩溃）。&lt;/p&gt;
-
-&lt;p&gt;[参考资料]：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/liuxiangke0210/article/details/79687240&quot;&gt;https://blog.csdn.net/liuxiangke0210/article/details/79687240&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>by 王勤晓</name></author><summary type="html">笔者在一线碰到过很多次Spark程序崩溃的问题，而且解决起来比较费劲。纠其根本原因在于开发人员在编写Spark程序时只注重功能实现，不了解Spark程序运行过程，程序性能不佳，导致现场运行问题频发。而解决问题的过程中，由于不了解运行过程，只能靠各种尝试，解决问题效率极低。</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;http://www.paulgraham.com/hp.html&quot;&gt;黑客与画家 原文地址&lt;/a&gt;&lt;/p&gt;</content><author><name>by 王勤晓</name></author><summary type="html">本周没有新的阅读。接上篇继续整理下Hackers and Painters（黑客与画家）一书的句子。</summary></entry></feed>

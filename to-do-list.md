@@ -18,7 +18,7 @@ permalink: /to-do-llist/
 10. ID3（√）
 11. C4.5（√）
 12. CART（√）
-13. K-eans
+13. K-eans（√）
 14. SVM
 15. Apriori
 16. 最大期望（EM）算法
@@ -30,7 +30,8 @@ permalink: /to-do-llist/
 22. 神经网络入门
 23. 深度学习入门
 24. 计算机视觉入门
-
+25. PCA
+26. SVD
 ### 文化类：
 1. 软件工程没有银弹
 
